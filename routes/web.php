@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
@@ -34,6 +35,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('map', function () {
 		return view('pages.map');
 	})->name('map');
+
+    Route::get('oai', 'DashboardController@oai')->name('oai');
 
 	Route::get('notifications', function () {
 		return view('pages.notifications');
