@@ -41,7 +41,7 @@ class DashboardController extends Controller
         }
         if (!empty($request->post('readSign1'))) {
 //            $myfile = fopen("/Users/tan/Downloads/test.txt", "r") or die("Unable to open file!" . $myfile);
-            $myfile = fopen("/Users/tan/Downloads/test.txt", "r") or die("Unable to open file!" . $myfile);
+            $myfile = fopen("/var/www/html/mi/public/log/log.txt", "r") or die("Unable to open file!" . $myfile);
             $res = "";
             while ($line = fgets($myfile)) {
                 $res = $res . $line . '</br>';
