@@ -73,7 +73,7 @@
                 <nav id="navbar-example2" class="navbar navbar-light bg-light" style="width: 100%">
                     <a class="navbar-brand" href="#">Execution Log</a>
                     <button type="button" class="btn btn-success" id="confBtn1">
-                        <a href="log/test.txt">
+                        <a href="log/log.txt">
                         Download
                         </a>
                     </button>
