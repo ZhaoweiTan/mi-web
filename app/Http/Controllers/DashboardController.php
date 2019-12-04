@@ -47,7 +47,7 @@ class DashboardController extends Controller
                 $res = $res . $line . '</br>';
             }
             fclose($myfile);
-            return $res;
+            return response()->json($res);
         }
     }
 }

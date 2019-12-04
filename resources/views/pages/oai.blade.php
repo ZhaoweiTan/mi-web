@@ -77,7 +77,7 @@
                     </button>
                 </nav>
                 <div class="scroll", style="text-align: center; width: 100%; height: 400px; background:#FFF; color:#000;">
-                    <p id ="showResult1"></p>
+                    <p id="showResult1"></p>
                 </div>
             </div>
         </div>
