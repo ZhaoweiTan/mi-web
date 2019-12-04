@@ -53,7 +53,7 @@ class DashboardController extends Controller
             $cmd = "sudo /home/wing/nfv/openairinterface5g/cmake_targets/lte_build_oai/build/lte-softmodem -O /home/wing/nfv/openairinterface5g/targets/PROJECTS/GENERIC-LTE-EPC/CONF/test.conf -d 2>&1  | tee /var/www/html/mi/public/log/log.txt";
             $myfile = fopen("/var/www/html/mi/public/log/log.txt", "r") or die("Unable to open file!" . $myfile);
         }
-        
+
         if (!empty($request->post('runSign1'))) {
             $rtn = exec($cmd);
             return response()->json($rtn);
