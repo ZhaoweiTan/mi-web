@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 class DashboardController extends Controller
 {
     /**
@@ -34,10 +36,12 @@ class DashboardController extends Controller
     {
         if (!empty($request->post('runSign1'))) {
             $cmd = "sudo /home/wing/nfv/openairinterface5g/cmake_targets/lte_build_oai/build/lte-softmodem -O /home/wing//nfv/openairinterface5g/targets/PROJECTS/GENERIC-LTE-EPC/CONF/test.conf -d 2>&1  | tee /var/www/html/mi/public/log/log.txt";
+//            $cmd = "ping 8.8.8.8 > /Users/tan/Downloads/test.txt";
             shell_exec($cmd);
         }
         if (!empty($request->post('readSign1'))) {
-            $myfile = fopen("/var/www/html/mi/public/log/log.txt", "r") or die("Unable to open file!" . $myfile);
+//            $myfile = fopen("/Users/tan/Downloads/test.txt", "r") or die("Unable to open file!" . $myfile);
+            $myfile = fopen("/Users/tan/Downloads/test.txt", "r") or die("Unable to open file!" . $myfile);
             $res = "";
             while ($line = fgets($myfile)) {
                 $res = $res . $line . '</br>';
