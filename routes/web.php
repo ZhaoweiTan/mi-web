@@ -36,6 +36,8 @@ Route::group(['middleware' => 'auth'], function () {
 		return view('pages.map');
 	})->name('map');
 
+
+    Route::post('oai/start', 'DashboardController@oai_start')->name('oai_start');
     Route::get('oai', 'DashboardController@oai')->name('oai');
 
 	Route::get('notifications', function () {

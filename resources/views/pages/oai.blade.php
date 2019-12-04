@@ -56,7 +56,7 @@
                         </div>
                         <div class="card-footer">
                             <div class="stats">
-                                <button type="button" class="btn btn-warning" id="confBtn1" name="confBtn1" data-toggle="modal" data-target="#Modal1">
+                                <button type="button" class="btn btn-warning" id="confBtn1" name="confBtn1" data-toggle="modal" onclick="Run();" >
                                     Start
                                 </button>
                                 <button type="button" class="btn btn-disabled" id="confBtn1" name="confBtn1" data-toggle="modal" data-target="#Modal1">
@@ -174,7 +174,7 @@
         function read1() {
             $.ajax({
                 type: "POST",
-                url: "./index.php/index/index/index",
+                url: "/oai/start",
                 data: {'readSign1':"true"},
                 dataType: 'json',
                 success: function(returndata){
@@ -184,25 +184,25 @@
                 },
                 error: function(xhr, status, error){
                     alert("error!");
-                    var errorMessage = xhr.status + ': ' + xhr.statusText
+                    var errorMessage = xhr.status + ': ' + xhr.statusText;
                     alert('Error - ' + errorMessage);
                 }
             });
         }
-        function Run1() {
+        function Run() {
             $('#conf_sys').prop("disabled",false);
             $('#conf_mi').prop("disabled",false);
 
             $.ajax({
                 type: "POST",
-                url: "./index.php/index/index/index",
+                url: "/oai/start",
                 data: {'runSign1':"true"},
                 dataType: 'json',
                 success: function(returndata){
                 },
                 error: function(xhr, status, error){
                     alert("error after running!");
-                    var errorMessage = xhr.status + ': ' + xhr.statusText
+                    var errorMessage = xhr.status + ': ' + xhr.statusText;
                     alert('Error - ' + errorMessage);
                 }
             });
