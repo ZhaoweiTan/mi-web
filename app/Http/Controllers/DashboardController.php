@@ -60,8 +60,19 @@ class DashboardController extends Controller
         }
         if (!empty($request->post('readSign1'))) {
             $res = "";
+            if (!empty($request->post('keyword'))) {
+                $keyword = $request->post('keyword');
+            }  else {
+                $keyword = "";
+            }
             while ($line = fgets($myfile)) {
-                $res = $res . $line . '</br>';
+                if ($keyword == "") {
+                    $res = $res . $line . '</br>';
+                } else {
+                    if (strpos($line, $keyword)) {
+                        $res = $res . $line . '</br>';
+                    }
+                }
             }
             fclose($myfile);
             return response()->json($res);

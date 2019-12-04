@@ -72,6 +72,7 @@
             <div class="row">
                 <nav id="navbar-example2" class="navbar navbar-light bg-light" style="width: 100%">
                     <a class="navbar-brand" href="#">Execution Log</a>
+                    <input class="form-control" id="filter" placeholder="Filter">
                     <button type="button" class="btn btn-success" id="confBtn1">
                         <a href="log/log.txt" download="log.txt">
                         Download
@@ -183,7 +184,7 @@
             $.ajax({
                 type: "POST",
                 url: "/oai/start",
-                data: {'readSign1':"true"},
+                data: {'readSign1':"true", 'keyword': document.getElementById("filter").value},
                 dataType: 'json',
                 success: function(returndata){
                     console.log(returndata);
