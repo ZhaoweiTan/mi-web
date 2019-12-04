@@ -73,7 +73,9 @@
                 <nav id="navbar-example2" class="navbar navbar-light bg-light" style="width: 100%">
                     <a class="navbar-brand" href="#">Execution Log</a>
                     <button type="button" class="btn btn-success" id="confBtn1">
+                        <a href="log/test.txt">
                         Download
+                        </a>
                     </button>
                 </nav>
                 <div class="scroll", style="text-align: center; overflow-y: scroll; width: 100%; height: 400px; background:#FFF; color:#000;">
