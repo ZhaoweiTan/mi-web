@@ -40,6 +40,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('oai/start', 'DashboardController@oai_start')->name('oai_start');
     Route::get('oai', 'DashboardController@oai')->name('oai');
 
+    Route::get('mi', 'DashboardController@mi')->name('mi');
+
 	Route::get('notifications', function () {
 		return view('pages.notifications');
 	})->name('notifications');
