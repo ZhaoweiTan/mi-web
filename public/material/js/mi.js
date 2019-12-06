@@ -21,26 +21,33 @@ function get_status() {
         dataType: 'json',
         success: function(returndata){
             if (returndata == "On") {
-                // green
                 $('#oai_status').html(returndata);
                 $('#oai_status').css('color', 'green');
                 $('#start_button').prop('disabled', true);
                 $('#start_button').addClass('btn-disabled');
                 $('#start_button').removeClass('btn-info');
+                $('#config_button').prop('disabled', true);
+                $('#config_button').addClass('btn-disabled');
+                $('#config_button').removeClass('btn-warning');
                 $('#stop_button').prop('disabled', false);
                 $('#stop_button').addClass('btn-info');
                 $('#stop_button').removeClass('btn-disabled');
+                $('#download_button').removeClass('disabled');
+
                 read();
             } else {
-                // green
                 $('#oai_status').html(returndata);
                 $('#oai_status').css('color', "red");
                 $('#start_button').prop('disabled', false);
                 $('#start_button').addClass('btn-info');
                 $('#start_button').removeClass('btn-disabled');
+                $('#config_button').prop('disabled', false);
+                $('#config_button').addClass('btn-warning');
+                $('#config_button').removeClass('btn-disabled');
                 $('#stop_button').prop('disabled', true);
                 $('#stop_button').addClass('btn-disabled');
                 $('#stop_button').removeClass('btn-info');
+                $('#download_button').addClass('disabled');
             }
         },
         error: function(xhr, status, error){

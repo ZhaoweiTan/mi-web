@@ -45,8 +45,6 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/', 'DashboardController@oai')->name('oai');
     });
 
-    Route::get('mi', 'DashboardController@mi')->name('mi');
-
 	Route::get('notifications', function () {
 		return view('pages.notifications');
 	})->name('notifications');

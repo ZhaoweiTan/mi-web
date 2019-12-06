@@ -17,12 +17,6 @@
           <p>{{ __('Oai') }}</p>
         </a>
       </li>
-      <li class="nav-item{{ $activePage == 'mi' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('mi') }}">
-          <i class="material-icons">build</i>
-          <p>{{ __('Mi') }}</p>
-        </a>
-      </li>
     </ul>
   </div>
 </div>

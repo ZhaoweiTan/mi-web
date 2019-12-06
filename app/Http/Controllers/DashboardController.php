@@ -64,16 +64,6 @@ class DashboardController extends Controller
 
     public function mi()
     {
-        $system_config = "Configured";
-        $mi_config = "Configured";
-        $mi_array = $this->mi_array;
-        $oai_status = array(
-            "status" => "On",
-            "time" => "0 hr"
-        );
-        return view('pages.mi', compact("system_config", "mi_config", "oai_status", "mi_array"));
-    }
-
     public function oai_start(Request $request)
     {
         $this->generateConfig($request);
@@ -138,7 +128,7 @@ class DashboardController extends Controller
 
     private function generateConfig($request)
     {
-//        dd($request->sysconfig);
+//        dd($request->miconfig);
         $mi_string = "";
         foreach ($this->mi_array as $k => $v) {
             if ($this->keyInArray($k, $request->miconfig ?? array()) == 'on') {
