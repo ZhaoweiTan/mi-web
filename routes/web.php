@@ -37,8 +37,13 @@ Route::group(['middleware' => 'auth'], function () {
 	})->name('map');
 
 
-    Route::post('oai/start', 'DashboardController@oai_start')->name('oai_start');
-    Route::get('oai', 'DashboardController@oai')->name('oai');
+    Route::group(['prefix' => 'oai'], function () {
+        Route::get('/check_status', 'DashboardController@check_status');
+        Route::post('/start', 'DashboardController@oai_start')->name('oai_start');
+        Route::post('/read', 'DashboardController@read_file');
+        Route::post('/kill', 'DashboardController@kill');
+        Route::get('/', 'DashboardController@oai')->name('oai');
+    });
 
     Route::get('mi', 'DashboardController@mi')->name('mi');
 
