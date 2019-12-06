@@ -143,7 +143,7 @@ class DashboardController extends Controller
 //        dd($request->miconfig);
         $mi_string = "";
         foreach ($this->mi_array as $k => $v) {
-            if ($this->keyInArray($v, $request->miconfig)) {
+            if ($this->keyInArray($v, $request->miconfig ?? array())) {
                 $mi_string = $mi_string . "$v = 1; \n";
             } else {
                 $mi_string = $mi_string . "$v = 0; \n";
