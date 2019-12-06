@@ -3,6 +3,8 @@ $(document).ready(function() {
     md.initDashboardPageCharts();
     get_status();
     setInterval("get_status()",5000);
+    $('#config_band7').attr('checked', 'checked');
+    $('#config_bandwidth10').attr('checked', 'checked');
 });
 
 $.ajaxSetup({
@@ -84,7 +86,6 @@ function kill() {
 function start_oai() {
     $('#conf_sys').prop("disabled",false);
     $('#conf_mi').prop("disabled",false);
-    console.log($('#miconfig_form').serializeArray());
     $.ajax({
         type: "POST",
         url: "/oai/start",

@@ -37,14 +37,12 @@ class DashboardController extends Controller
      */
     public function oai()
     {
-        $system_config = "Configured";
-        $mi_config = "Configured";
         $mi_array = $this->mi_array;
         $oai_status = array(
-            "band" => array(7, 13),
+            "band" => array(7),
             "bandwidth" => array(5, 10, 15)
         );
-        return view('pages.oai', compact("system_config", "mi_config", "oai_status", "mi_array"));
+        return view('pages.oai', compact( "oai_status", "mi_array"));
     }
 
 
@@ -82,7 +80,7 @@ class DashboardController extends Controller
         if ($this->isLocal) {
             $cmd = "ping -i 2 8.8.8.8 > /Users/tan/Documents/Development/mobiq/mi-web/public/log/log.txt";
         } else {
-            $cmd = "sudo /home/wing/nfv/openairinterface5g/cmake_targets/lte_build_oai/build/lte-softmodem -O /home/wing/nfv/openairinterface5g/targets/PROJECTS/GENERIC-LTE-EPC/CONF/test.conf -d 2>&1  | tee /var/www/html/mi/public/log/log.txt";
+            $cmd = "sudo /home/wing/nfv/openairinterface5g/cmake_targets/lte_build_oai/build/lte-softmodem -O /var/www/html/mi/storage/app/tmp.conf -d 2>&1  | tee /var/www/html/mi/public/log/log.txt";
         }
         $rtn = exec($cmd);
         return response()->json($rtn);
@@ -131,7 +129,7 @@ class DashboardController extends Controller
     private function keyInArray($needle, $haystack) {
         foreach ($haystack as $a) {
             if ($a['name'] == $needle) {
-                return True;
+                return $a['value'];
             }
         }
         return False;
@@ -140,7 +138,7 @@ class DashboardController extends Controller
 
     private function generateConfig($request)
     {
-//        dd($request->miconfig);
+//        dd($request->sysconfig);
         $mi_string = "";
         foreach ($this->mi_array as $k => $v) {
             if ($this->keyInArray($v, $request->miconfig ?? array())) {
@@ -150,6 +148,24 @@ class DashboardController extends Controller
             }
         }
         $sys = $request->sysconfig;
+//        dd($sys);
+        $band = $this->keyInArray('config_band', $sys);
+        $bw = $this->keyInArray('config_bandwidth', $sys) ;
+
+        if ($band == '7') {
+            $dlfreq = "2685000000L";
+            $ulfreq = "-120000000";
+            if ($bw == '5') {
+                $nrb = 25;
+            } else if ($bw == '10') {
+                $nrb = 50;
+            } else if ($bw == '15') {
+                $nrb = 75;
+            } else if ($bw == '20') {
+                $nrb = 100;
+            }
+        }
+
         $content = "
 Active_eNBs = ( \"eNB-Eurecom-LTEBox\");
 # Asn1_verbosity, choice in: none, info, annoying
@@ -183,11 +199,11 @@ eNBs =
       tdd_config 					      = 3;
       tdd_config_s            			      = 0;
       prefix_type             			      = \"NORMAL\";
-      eutra_band              			      = 7;
-      downlink_frequency      			      = 2685000000L;
-      uplink_frequency_offset 			      = -120000000;
+      eutra_band              			      = $band;
+      downlink_frequency      			      = $dlfreq;
+      uplink_frequency_offset 			      = $ulfreq;
       Nid_cell					      = 0;
-      N_RB_DL                 			      = 50;
+      N_RB_DL                 			      = $nrb;
       Nid_cell_mbsfn          			      = 0;
       nb_antenna_ports                                = 1;
       nb_antennas_tx          			      = 1;
@@ -454,7 +470,6 @@ mi_log_level:
 $mi_string
   };
         ";
-
-        Storage::disk('local')->put('file.txt', $content);
+        Storage::disk('local')->put('tmp.conf', $content);
     }
 }

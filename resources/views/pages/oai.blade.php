@@ -11,7 +11,7 @@
                                 <i class="material-icons">content_copy</i>
                             </div>
                             <p class="card-category">System Config</p>
-                            <h4 class="card-title">{{ $system_config }} </h4>
+                            <h4 class="card-title" id="config_string"> Custom Config Enabled </h4>
                         </div>
                         <div class="card-footer">
                             <div class="stats">
@@ -166,7 +166,7 @@
                             @foreach ($oai_status['band'] as $band)
                             <div class="form-check form-check-radio form-check-inline">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="config_band" id="inlineRadio1" value="option1"> Band {{$band}}
+                                    <input class="form-check-input" type="radio" name="config_band" id="config_band{{$band}}" value={{$band}}> Band {{$band}}
                                     <span class="circle">
                                         <span class="check"></span>
                                     </span>
@@ -179,7 +179,7 @@
                             @foreach ($oai_status['bandwidth'] as $bandwidth)
                             <div class="form-check form-check-radio form-check-inline">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="config_bandwidth" id="inlineRadio1" value="">  {{$bandwidth}} MHz
+                                    <input class="form-check-input" type="radio" name="config_bandwidth" id="config_bandwidth{{$bandwidth}}" value={{$bandwidth}}>  {{$bandwidth}} MHz
                                     <span class="circle">
                                         <span class="check"></span>
                                     </span>
