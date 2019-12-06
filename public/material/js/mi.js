@@ -33,7 +33,7 @@ function get_status() {
                 $('#stop_button').addClass('btn-info');
                 $('#stop_button').removeClass('btn-disabled');
                 $('#download_button').removeClass('disabled');
-
+                $('#mi-div').show();
                 read();
             } else {
                 $('#oai_status').html(returndata);

@@ -62,8 +62,6 @@ class DashboardController extends Controller
         }
     }
 
-    public function mi()
-    {
     public function oai_start(Request $request)
     {
         $this->generateConfig($request);
