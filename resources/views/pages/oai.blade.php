@@ -139,7 +139,7 @@
                     </button>
                 </div>
                 <div class="modal-body" style="text-align: left">
-                    <form id="config_form">
+                    <form id="miconfig_form">
                     @foreach ($mi_array as $k => $v)
                     <div class="form-check">
                         <label class="form-check-label">
@@ -151,6 +151,42 @@
                         </label>
                     </div>
                     @endforeach
+                    </form>
+                </div>
+                <div class="modal-header">
+                    <h5 class="modal-title">OAI Configuration</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="text-align: left">
+                    <form id="sysconfig_form">
+                        <div>
+                            Select Band:
+                            @foreach ($oai_status['band'] as $band)
+                            <div class="form-check form-check-radio form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="config_band" id="inlineRadio1" value="option1"> Band {{$band}}
+                                    <span class="circle">
+                                        <span class="check"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            @endforeach
+                        </div>
+                        <div name="btnGroup">
+                            Select Bandwidth:
+                            @foreach ($oai_status['bandwidth'] as $bandwidth)
+                            <div class="form-check form-check-radio form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="config_bandwidth" id="inlineRadio1" value="">  {{$bandwidth}} MHz
+                                    <span class="circle">
+                                        <span class="check"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            @endforeach
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">

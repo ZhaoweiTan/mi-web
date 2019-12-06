@@ -84,12 +84,13 @@ function kill() {
 function start_oai() {
     $('#conf_sys').prop("disabled",false);
     $('#conf_mi').prop("disabled",false);
-
+    console.log($('#miconfig_form').serializeArray());
     $.ajax({
         type: "POST",
         url: "/oai/start",
         data: {
-            'config_mi': $('#config_form').serializeArray(),
+            'miconfig': $('#miconfig_form').serializeArray(),
+            'sysconfig': $('#sysconfig_form').serializeArray(),
         },
         dataType: 'json',
         success: function(returndata) {
