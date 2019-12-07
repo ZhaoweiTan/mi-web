@@ -25,8 +25,8 @@ class DashboardController extends Controller
         "0xB13C" => "LTE_PHY_PUCCH_SR",
     );
     private $func_array = array(
-        "Resource Block Analysis" => "",
-        "Bandwidth Analysis" => "",
+        "Resource Block Analysis" => "rb",
+        "Bandwidth Analysis" => "bw",
     );
 
     public function __construct()
@@ -106,8 +106,25 @@ class DashboardController extends Controller
     }
 
     public function run_analysis(Request $request) {
+        if ($this->isLocal) {
+            $log_path = " mi/mac3.txt";
+        }
+
         $type = $request->type[0]['value'];
-        return response()->json();
+        $func = "";
+        foreach ($this->func_array as $k => $v) {
+            if ($type == $k) {
+                $func = $v;
+            }
+        }
+
+        if ($func == "") {
+            return response()->json();
+        } else {
+            $cmd = '/usr/local/bin/python3 mi/offline-'. $func . '.py ' . $log_path . " 2>&1";
+            $res = exec($cmd);
+            return response()->json($res);
+        }
     }
 
     public function kill() {

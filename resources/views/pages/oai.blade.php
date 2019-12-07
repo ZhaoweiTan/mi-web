@@ -71,7 +71,7 @@
                     <input class="form-control" id="filter" placeholder="Keyword (E.g. SCTP)">
                     <a href="log/log.txt" download="log.txt" class="btn btn-primary" id="download_button" role="button" aria-disabled="true" style="margin: auto;">Download This Log</a>
                 </nav>
-                <div class="scroll", style="text-align: left; overflow-y: scroll; width: 100%; height: 400px; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="log_scroll">
+                <div class="scroll" style="text-align: left; overflow-y: scroll; width: 100%; height: 400px; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="log_scroll">
                     <p id="showResult"></p>
                 </div>
             </div>
@@ -171,7 +171,27 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" name="Sumbitbtn1" class="btn btn-primary" data-dismiss="modal" onclick="run_analysis();">Run Analysis</button>
+                    <button type="button" name="Sumbitbtn1" class="btn btn-primary" id="analysis_button" onclick="run_analysis();">Run Analysis</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="result_modal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Analysis Result</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="text-align: left; overflow-y: auto;" >
+                    <div style="text-align: left; width: 100%" id="analysis_scroll">
+                        <p id="analysis_result"></p>
+                    </div>
+                    <div style="text-align: left" id="img_container">
+                    </div>
                 </div>
             </div>
         </div>

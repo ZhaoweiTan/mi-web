@@ -112,6 +112,10 @@ function start_oai() {
 }
 
 function run_analysis() {
+    $('#analysis_button').prop('disabled', true);
+    $('#analysis_button').addClass('btn-disabled');
+    $('#analysis_button').removeClass('btn-primary');
+    $('#analysis_button').html('Processing...');
     var tmp = $('#analysis_form').serializeArray();
     if (tmp.length == 0) {
         alert("Please select the analysis type.");
@@ -125,7 +129,15 @@ function run_analysis() {
         },
         dataType: 'json',
         success: function(returndata) {
-            get_status();
+            $('#analysis_button').prop('disabled', false);
+            $('#analysis_button').removeClass('btn-disabled');
+            $('#analysis_button').addClass('btn-primary');
+            $('#analysis_button').html('Run Analysis');
+
+            $('#mi_modal').modal('hide');
+            $('#result_modal').modal('show');
+            $('#analysis_result').html(returndata);
+            $('#img_container').html('<img id="res_image" style="width:100%" src="mi/result.png" />');
         },
         error: function(xhr, status, error){
             var errorMessage = xhr.status + ': ' + xhr.statusText;
