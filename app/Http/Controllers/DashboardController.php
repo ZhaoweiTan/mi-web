@@ -7,13 +7,14 @@ use Illuminate\Support\Facades\Storage;
 
 class DashboardController extends Controller
 {
+    private $isLocal;
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
 
-    private $isLocal = True;
     private $mi_array = array(
         "0xB0A3" => "LTE_PDCP_DL_Cipher_Data_PDU",
         "0xB0B3" => "LTE_PDCP_UL_Cipher_Data_PDU",
@@ -32,6 +33,7 @@ class DashboardController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->isLocal = config('mi.local') == 'local' ? True : False;
     }
 
     /**
@@ -107,6 +109,8 @@ class DashboardController extends Controller
 
     public function run_analysis(Request $request) {
         if ($this->isLocal) {
+            $log_path = " mi/mac3.txt";
+        } else {
             $log_path = " mi/mac3.txt";
         }
 
