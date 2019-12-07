@@ -110,8 +110,10 @@ class DashboardController extends Controller
     public function run_analysis(Request $request) {
         if ($this->isLocal) {
             $log_path = " mi/mac3.txt";
+            $python_path = "/usr/local/bin/python3";
         } else {
             $log_path = " mi/mac3.txt";
+            $python_path = "/usr/bin/python3.6";
         }
 
         $type = $request->type[0]['value'];
@@ -125,7 +127,7 @@ class DashboardController extends Controller
         if ($func == "") {
             return response()->json();
         } else {
-            $cmd = '/usr/local/bin/python3 mi/offline-'. $func . '.py ' . $log_path . " 2>&1";
+            $cmd = $python_path . ' mi/offline-'. $func . '.py ' . $log_path . " 2>&1";
             $res = exec($cmd);
             return response()->json($res);
         }
