@@ -113,7 +113,7 @@ class DashboardController extends Controller
             $python_path = "/usr/local/bin/python3";
         } else {
             $log_path = " mi/mac3.txt";
-            $python_path = "/usr/bin/python3.6";
+            $python_path = "/usr/bin/python3";
         }
 
         $type = $request->type[0]['value'];
