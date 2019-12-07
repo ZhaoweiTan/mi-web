@@ -137,7 +137,7 @@ class DashboardController extends Controller
         if ($this->isLocal) {
             $cmd = "kill -9 `ps -A | grep ping | awk '{ print $1 }'` 2>&1";
         } else {
-            $cmd = "kill -9 `ps -A | grep softmodem | awk '{ print $1 }'` 2>&1";
+            $cmd = "sudo kill -9 `ps -A | grep softmodem | awk '{ print $1 }'` 2>&1";
         }
         $rtn = exec($cmd);
         return response()->json($rtn);
