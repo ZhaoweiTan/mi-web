@@ -111,3 +111,26 @@ function start_oai() {
     });
 }
 
+function run_analysis() {
+    var tmp = $('#analysis_form').serializeArray();
+    if (tmp.length == 0) {
+        alert("Please select the analysis type.");
+        return;
+    }
+    $.ajax({
+        type: "POST",
+        url: "/oai/analysis",
+        data: {
+            'type': tmp,
+        },
+        dataType: 'json',
+        success: function(returndata) {
+            get_status();
+        },
+        error: function(xhr, status, error){
+            var errorMessage = xhr.status + ': ' + xhr.statusText;
+            alert('Error - ' + errorMessage);
+        }
+    });
+}
+

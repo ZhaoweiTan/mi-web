@@ -24,6 +24,10 @@ class DashboardController extends Controller
         "0xB082" => "LTE_RLC_DL_AM_All_PDU",
         "0xB13C" => "LTE_PHY_PUCCH_SR",
     );
+    private $func_array = array(
+        "Resource Block Analysis" => "",
+        "Bandwidth Analysis" => "",
+    );
 
     public function __construct()
     {
@@ -38,11 +42,12 @@ class DashboardController extends Controller
     public function oai()
     {
         $mi_array = $this->mi_array;
+        $func_array = $this->func_array;
         $oai_status = array(
             "band" => array(7),
             "bandwidth" => array(5, 10, 15)
         );
-        return view('pages.oai', compact( "oai_status", "mi_array"));
+        return view('pages.oai', compact( "oai_status", "mi_array", "func_array"));
     }
 
 
@@ -100,7 +105,8 @@ class DashboardController extends Controller
 
     }
 
-    public function run_analysis($type) {
+    public function run_analysis(Request $request) {
+        $type = $request->type[0]['value'];
         return response()->json();
     }
 

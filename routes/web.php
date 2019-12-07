@@ -42,6 +42,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/start', 'DashboardController@oai_start')->name('oai_start');
         Route::post('/read', 'DashboardController@read_file');
         Route::post('/kill', 'DashboardController@kill');
+        Route::post('/analysis', 'DashboardController@run_analysis');
         Route::get('/', 'DashboardController@oai')->name('oai');
     });
 

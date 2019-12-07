@@ -56,7 +56,7 @@
                         </div>
                         <div class="card-footer">
                             <div class="stats">
-                                <button type="button" class="btn btn-info" id="mi_button" name="confBtn1" data-toggle="modal" >
+                                <button type="button" class="btn btn-info" id="mi_button" name="confBtn1" data-toggle="modal" data-target="#mi_modal" >
                                     Select Analysis
                                 </button>
                             </div>
@@ -140,6 +140,38 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" name="Sumbitbtn1" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="mi_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Select Your Analysis</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="text-align: left">
+                    <form id="analysis_form">
+                        @foreach ($func_array as $k => $v)
+                            <div class="form-check form-check-radio">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="type" value="{{$k}}">
+                                    {{$k}}
+                                    <span class="circle">
+                                        <span class="check"></span>
+                                    </span>
+                                </label>
+                            </div>
+                        @endforeach
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" name="Sumbitbtn1" class="btn btn-primary" data-dismiss="modal" onclick="run_analysis();">Run Analysis</button>
                 </div>
             </div>
         </div>
