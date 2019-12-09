@@ -495,6 +495,30 @@ $mi_string
     }
 
     public function custom_analysis(Request $request) {
-        dd($request->log_file);
+        $rtn_arr = array();
+        $log = $request->log_file;
+        $script = $request->script_file;
+        $analyzer = $request->analyzer_file;
+
+        move_uploaded_file($log, "log/log_custom.txt");
+        move_uploaded_file($script, "mi/custom.py");
+        $analyzer_name = $analyzer->getClientOriginalName();
+        if (file_exists("mi/$analyzer_name")) {
+            $rtn_arr['msg'] = "The analyzer of the same name already exists. Using the old analyzer...";
+        } else {
+            move_uploaded_file($analyzer, "mi/");
+        }
+
+        if ($this->isLocal) {
+            $python_path = "/usr/local/bin/python3";
+        } else {
+            $python_path = "/usr/bin/python3";
+        }
+
+        $cmd = $python_path . " mi/custom.py log/log_custom.txt 2>&1";
+        $res = exec($cmd);
+        $rtn_arr['result'] = $res;
+        return response()->json($rtn_arr);
+
     }
 }
