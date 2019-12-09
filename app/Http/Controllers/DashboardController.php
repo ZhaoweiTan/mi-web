@@ -495,18 +495,27 @@ $mi_string
     }
 
     public function custom_analysis(Request $request) {
-        $rtn_arr = array();
+        $rtn_arr = array(
+            "status" => 1,
+        );
         $log = $request->log_file;
         $script = $request->script_file;
         $analyzer = $request->analyzer_file;
+        if (!($script->isValid() && $analyzer->isValid() && $log->isValid() )) {
+            $rtn_arr['status'] = 2;
+            $rtn_arr['msg'] = "File upload fail. Check your file type or size.";
+            return response()->json($rtn_arr);
+        }
 
+        $existed = false;
         move_uploaded_file($log, "log/log_custom.txt");
         move_uploaded_file($script, "mi/custom.py");
         $analyzer_name = $analyzer->getClientOriginalName();
         if (file_exists("mi/$analyzer_name")) {
             $rtn_arr['msg'] = "The analyzer of the same name already exists. Using the old analyzer...";
+            $existed = true;
         } else {
-            move_uploaded_file($analyzer, "mi/");
+            move_uploaded_file($analyzer, "mi/$analyzer_name");
         }
 
         if ($this->isLocal) {
@@ -518,6 +527,12 @@ $mi_string
         $cmd = $python_path . " mi/custom.py log/log_custom.txt 2>&1";
         $res = exec($cmd);
         $rtn_arr['result'] = $res;
+
+        if (! $existed) {
+            unlink("mi/$analyzer_name");
+        }
+        unlink("mi/custom.py");
+        unlink("log/log_custom.txt");
         return response()->json($rtn_arr);
 
     }

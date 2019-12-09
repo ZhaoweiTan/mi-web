@@ -39,6 +39,25 @@
         </div>
     </div>
 
+    <div class="modal fade " id="result_modal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Analysis Result</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="text-align: left; overflow-y: auto;" >
+                    <div style="text-align: left; width: 100%" id="analysis_scroll">
+                        <p id="analysis_result"></p>
+                    </div>
+                    <div style="text-align: left" id="img_container">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @push('js')
