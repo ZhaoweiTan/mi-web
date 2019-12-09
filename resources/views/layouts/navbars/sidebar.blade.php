@@ -17,6 +17,12 @@
           <p>{{ __('Oai') }}</p>
         </a>
       </li>
+      <li class="nav-item{{ $activePage == 'custom' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('custom') }}">
+          <i class="material-icons">settings_applications</i>
+          <p>{{ __('Custom') }}</p>
+        </a>
+      </li>
     </ul>
   </div>
 </div>

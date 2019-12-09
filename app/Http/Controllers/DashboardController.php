@@ -489,4 +489,12 @@ $mi_string
         ";
         Storage::disk('local')->put('tmp.conf', $content);
     }
+
+    public function custom() {
+        return view('pages.custom', compact(""));
+    }
+
+    public function custom_analysis(Request $request) {
+        dd($request->log_file);
+    }
 }

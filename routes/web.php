@@ -46,6 +46,11 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/', 'DashboardController@oai')->name('oai');
     });
 
+    Route::group(['prefix' => 'custom'], function () {
+        Route::post('/analysis', 'DashboardController@custom_analysis');
+        Route::get('/', 'DashboardController@custom')->name('custom');
+    });
+
 	Route::get('notifications', function () {
 		return view('pages.notifications');
 	})->name('notifications');
