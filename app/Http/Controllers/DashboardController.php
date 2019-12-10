@@ -526,9 +526,15 @@ $mi_string
 
         $cmd = $python_path . " mi/custom.py log/log_custom.txt 2>&1";
         $res = exec($cmd);
+
+        if (strpos(strtolower($res), "error")) {
+            $rtn_arr['status'] = 3;
+        }
+
+
         $rtn_arr['result'] = $res;
 
-        if (! $existed) {
+        if (!$existed) {
             unlink("mi/$analyzer_name");
         }
         unlink("mi/custom.py");

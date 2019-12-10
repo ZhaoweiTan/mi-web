@@ -24,7 +24,12 @@ function submit() {
             rtn = xhr.response;
             if (rtn['status'] == 2) {
                 alert(rtn['msg']);
-            } else {
+            } else if (rtn['status'] == 3) {
+                $('#result_modal').modal('show');
+                $('#analysis_result').html(rtn['result']);
+                $('#img_container').html('');
+            }
+            else {
                 $('#result_modal').modal('show');
                 $('#analysis_result').html(rtn['result']);
                 $('#img_container').html('<img id="res_image" style="width:100%" src="mi/result.png" />');
