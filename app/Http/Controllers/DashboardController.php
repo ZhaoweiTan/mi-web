@@ -540,6 +540,10 @@ $mi_string
         unlink("mi/custom.py");
         unlink("log/log_custom.txt");
         return response()->json($rtn_arr);
+    }
 
+    public function co_analysis (Request $request)
+    {
+        return;
     }
 }

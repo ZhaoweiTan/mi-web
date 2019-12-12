@@ -36,6 +36,43 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header card-header-info card-header-icon">
+                            <div class="card-icon">
+                                <i class="material-icons">backup</i>
+                            </div>
+                            <p class="card-category">Customized Co-analysis</p>
+                            <h4 class="card-title" id="log_string">
+                                Upload your MI-phone log, MI-eNB log, analyzer, and analysis script to run customized analysis
+                            </h4>
+                            <button type="button" class="btn btn-disabled" id="run_co_button" onclick="submit_co();" disabled>Run Analysis</button>
+                        </div>
+                        <div class="card-footer">
+                            <form class="form-check-inline" id="file_form_co" action="custom/co-analysis" method="post">
+                                @csrf
+                                <div>
+                                    Upload MI Phone Side Log
+                                    <input type="file" class="form-control-file file_input_co" id="uploadPhone_co" name="phone_file">
+                                </div>
+                                <div>
+                                    Select customized log file:
+                                    <input type="file" class="form-control-file file_input_co" id="uploadLog_co" name="log_file">
+                                </div>
+                                <div>
+                                    Upload your analyzer:
+                                    <input type="file" class="form-control-file file_input_co" id="uploadAnalyzer_co" name ="analyzer_file" >
+                                </div>
+                                <div>
+                                    Upload analysis script
+                                    <input type="file" class="form-control-file file_input_co" id="uploadScript_co" name="script_file">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

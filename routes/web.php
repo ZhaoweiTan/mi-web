@@ -48,6 +48,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::group(['prefix' => 'custom'], function () {
         Route::post('/analysis', 'DashboardController@custom_analysis');
+        Route::post('/co-analysis', 'DashboardController@co_analysis');
         Route::get('/', 'DashboardController@custom')->name('custom');
     });
 
