@@ -46,8 +46,8 @@ class DashboardController extends Controller
         $mi_array = $this->mi_array;
         $func_array = $this->func_array;
         $oai_status = array(
-            "band" => array(7),
-            "bandwidth" => array(5, 10, 15)
+            "band" => array(7, 39),
+            "bandwidth" => array(5, 10, 15, 20)
         );
         return view('pages.oai', compact( "oai_status", "mi_array", "func_array"));
     }
@@ -172,15 +172,19 @@ class DashboardController extends Controller
         if ($band == '7') {
             $dlfreq = "2685000000L";
             $ulfreq = "-120000000";
-            if ($bw == '5') {
-                $nrb = 25;
-            } else if ($bw == '10') {
-                $nrb = 50;
-            } else if ($bw == '15') {
-                $nrb = 75;
-            } else if ($bw == '20') {
-                $nrb = 100;
-            }
+        } elseif ($band == '39') {
+            $dlfreq = "L";
+            $ulfreq = "";
+        }
+
+        if ($bw == '5') {
+            $nrb = 25;
+        } else if ($bw == '10') {
+            $nrb = 50;
+        } else if ($bw == '15') {
+            $nrb = 75;
+        } else if ($bw == '20') {
+            $nrb = 100;
         }
 
         $content = "
