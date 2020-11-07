@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Log;
 
 class DashboardController extends Controller
 {
@@ -56,7 +57,7 @@ class DashboardController extends Controller
     public function check_status()
     {
         if ($this->isLocal) {
-            $keyword = "8.8.8.8";
+            $keyword = "ping";
         } else {
             $keyword = "softmodem";
         }
@@ -73,7 +74,7 @@ class DashboardController extends Controller
     {
         $this->generateConfig($request);
         if ($this->isLocal) {
-            $cmd = "ping -i 2 8.8.8.8 > /Users/tan/Documents/Development/mobiq/mi-web/public/log/log.txt";
+            $cmd = "ping -i 2 8.8.8.8 > ./log/log.txt";
         } else {
             $cmd = "sudo /home/wing/nfv/openairinterface5g/cmake_targets/lte_build_oai/build/lte-softmodem -O /var/www/html/mi/storage/app/tmp.conf -d 2>&1  | tee /var/www/html/mi/public/log/log.txt";
         }
@@ -85,7 +86,7 @@ class DashboardController extends Controller
     public function read_file(Request $request)
     {
         if ($this->isLocal) {
-            $myfile = fopen("/Users/tan/Documents/Development/mobiq/mi-web/public/log/log.txt", "r") or die("Unable to open file!" . $myfile);
+            $myfile = fopen("./log/log.txt", "r") or die("Unable to open file!" . $myfile);
         } else {
             $myfile = fopen("/var/www/html/mi/public/log/log.txt", "r") or die("Unable to open file!" . $myfile);
         }
@@ -109,11 +110,11 @@ class DashboardController extends Controller
 
     public function run_analysis(Request $request) {
         if ($this->isLocal) {
-            $log_path = " mi/mac3.txt";
-            $python_path = "/usr/local/bin/python3";
+            $log_path = " log/log.txt";
+            $python_path = "python3";
         } else {
-            $log_path = " mi/mac3.txt";
-            $python_path = "/usr/bin/python3";
+            $log_path = " log/log.txt";
+            $python_path = "python3";
         }
 
         $type = $request->type[0]['value'];
@@ -495,7 +496,7 @@ $mi_string
     }
 
     public function custom() {
-        return view('pages.custom', compact(""));
+        return view('pages.custom');
     }
 
     public function custom_analysis(Request $request) {
@@ -523,9 +524,9 @@ $mi_string
         }
 
         if ($this->isLocal) {
-            $python_path = "/usr/local/bin/python3";
+            $python_path = "python3";  // TODO: change to user's real path
         } else {
-            $python_path = "/usr/bin/python3";
+            $python_path = "python3";
         }
 
         $cmd = $python_path . " mi/custom.py log/log_custom.txt 2>&1";

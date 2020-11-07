@@ -44,20 +44,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6" id="mi-div" style="display:none">
+                <div class="col-lg-4 col-md-6 col-sm-6" id="mi-div" style="display: none">
                     <div class="card card-stats">
                         <div class="card-header card-header-info card-header-icon">
                             <div class="card-icon">
                                 <i class="material-icons">equalizer</i>
                             </div>
                             <p class="card-category">MobileInsight Analysis</p>
-                            <h4 class="card-title" id="oai_status">
-                            </h4>
                         </div>
                         <div class="card-footer">
                             <div class="stats">
-                                <button type="button" class="btn btn-info" id="mi_button" name="confBtn1" data-toggle="modal" data-target="#mi_modal" >
-                                    Select Analysis
+                                <button type="button" class="btn btn-info" id="mi_run_button" name="confBtn1" data-toggle="modal" data-target="#mi_modal" >
+                                    Run Analysis
+                                </button>
+                                <button type="button" class="btn btn-info" id="mi_stop_button" name="confBtn1" data-toggle="modal" onclick="stop_analysis();">
+                                    Stop Analysis
                                 </button>
                             </div>
                         </div>
@@ -65,15 +66,21 @@
                 </div>
             </div>
             <div class="row">
-                <nav id="navbar-example2" class="navbar navbar-light bg-light" style="width: 100%">
-                    <a class="navbar-brand" href="#">Execution Log</a>
-                    <a class="navbar-brand" href="#">Filter the log by keyword:</a>
-                    <input class="form-control" id="filter" placeholder="Keyword (E.g. SCTP)">
-                    <a href="log/log.txt" download="log.txt" class="btn btn-primary" id="download_button" role="button" aria-disabled="true" style="margin: auto;">Download This Log</a>
-                </nav>
-                <div class="scroll" style="text-align: left; overflow-y: scroll; width: 100%; height: 400px; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="log_scroll">
-                    <p id="showResult"></p>
-                </div>
+                    <nav id="navbar-example2" class="navbar navbar-light bg-light" style="width: 100%; height: 200px;">
+                        <a class="navbar-brand" href="#">Execution Log</a>
+                        <a class="navbar-brand" href="#">Filter the log by keyword:</a>
+                        <input class="form-control" id="filter" placeholder="Keyword (E.g. SCTP)">
+                        <a href="log/log.txt" download="log.txt" class="btn btn-primary" id="download_button" role="button" style="margin: auto;">Download This Log</a>
+                    </nav>
+                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 50%; height: 400px; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="log_scroll">
+                        <h4 class="card-title" style="text-align: center;"><i>OAI Log</i></h4>
+                        <p id="log_result"></p>
+                    </div> 
+                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 50%; height: 400px; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="analysis_scroll">
+                        <h4 class="card-title" style="text-align: center;"><i>MobileInsight Analysis Result</i></h4>
+                        <p id="analysis_result"></p>
+                        <div style="text-align: center" id="img_result">
+                    </div> 
             </div>
         </div>
     </div>
@@ -171,13 +178,17 @@
                     </form>
                 </div>
                 <div class="modal-footer">
+                    <div>
+                        <input type="checkbox" id="real_time_analysis">
+                        <label for="real_time_analysis"> run analysis in real time </label>
+                    </div>
                     <button type="button" name="Sumbitbtn1" class="btn btn-primary" id="analysis_button" onclick="run_analysis();">Run Analysis</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade " id="result_modal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade " id="result_modal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -195,7 +206,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 @endsection
 
 @push('js')

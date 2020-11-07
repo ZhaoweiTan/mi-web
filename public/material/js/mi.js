@@ -35,6 +35,9 @@ function get_status() {
                 $('#download_button').removeClass('disabled');
                 $('#mi-div').show();
                 read();
+                if ($('#real_time_analysis').is(':checked')) {
+                    run_analysis();
+                }
             } else {
                 $('#oai_status').html(returndata);
                 $('#oai_status').css('color', "red");
@@ -47,7 +50,11 @@ function get_status() {
                 $('#stop_button').prop('disabled', true);
                 $('#stop_button').addClass('btn-disabled');
                 $('#stop_button').removeClass('btn-info');
-                $('#download_button').addClass('disabled');
+                if ($('#log_result').is(':empty')) {
+                    $('#download_button').addClass('disabled');
+                } else {
+                    $('#download_button').removeClass('disabled');
+                }
             }
         },
         error: function(xhr, status, error){
@@ -64,8 +71,8 @@ function read() {
         data: {'keyword': document.getElementById("filter").value},
         dataType: 'json',
         success: function(returndata){
-            $('#showResult').html(returndata)
             $('#log_scroll').scrollTop($('#log_scroll').prop('scrollHeight'));
+            $('#log_result').html(returndata);
         },
         error: function(xhr, status, error){
             var errorMessage = xhr.status + ': ' + xhr.statusText;
@@ -135,14 +142,21 @@ function run_analysis() {
             $('#analysis_button').html('Run Analysis');
 
             $('#mi_modal').modal('hide');
-            $('#result_modal').modal('show');
+            // $('#result_modal').modal('show');
+            $('#analysis_result').scrollTop($('#log_scroll').prop('scrollHeight'));
             $('#analysis_result').html(returndata);
-            $('#img_container').html('<img id="res_image" style="width:100%" src="mi/result.png" />');
+            $("#res_image").attr("src", "/mi/result.png?" + new Date().getTime()); // refresh the image cache
+            $('#img_result').html('<img id="res_image" style="width:100%" src="mi/result.png" />');
         },
         error: function(xhr, status, error){
             var errorMessage = xhr.status + ': ' + xhr.statusText;
             alert('Error - ' + errorMessage);
         }
     });
+}
+
+function stop_analysis() {
+    alert("MobileInsight analysis has been stopped");
+    $('#real_time_analysis').prop('checked', false);
 }
 
