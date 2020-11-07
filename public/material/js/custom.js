@@ -25,14 +25,15 @@ function submit() {
             if (rtn['status'] == 2) {
                 alert(rtn['msg']);
             } else if (rtn['status'] == 3) {
-                $('#result_modal').modal('show');
+                $('#analysis_result').scrollTop($('#log_scroll').prop('scrollHeight'));
                 $('#analysis_result').html(rtn['result']);
                 $('#img_container').html('');
             }
             else {
-                $('#result_modal').modal('show');
+                $('#analysis_result').scrollTop($('#log_scroll').prop('scrollHeight'));
                 $('#analysis_result').html(rtn['result']);
                 $('#img_container').html('<img id="res_image" style="width:100%" src="mi/result.png" />');
+                $("#res_image").attr("src", "/mi/result.png?" + new Date().getTime()); // refresh the image cache
             }
         }
     };
@@ -61,13 +62,14 @@ function submit_co() {
             if (rtn['status'] == 2) {
                 alert(rtn['msg']);
             } else if (rtn['status'] == 3) {
-                $('#result_modal').modal('show');
-                $('#analysis_result').html(rtn['result']);
-                $('#img_container').html('');
+                $('#co_analysis_result').scrollTop($('#log_scroll').prop('scrollHeight'));
+                $('#co_analysis_result').html(rtn['result']);
+                $('#co_img_container').html('');
             } else {
-                $('#result_modal').modal('show');
-                $('#analysis_result').html(rtn['result']);
-                $('#img_container').html('<img id="res_image" style="width:100%" src="mi/result.png" />');
+                $('#co_analysis_result').html(rtn['result']);
+                $('#co_analysis_result').scrollTop($('#log_scroll').prop('scrollHeight'));
+                $('#co_img_container').html('<img id="co_res_image" style="width:100%" src="mi/result.png" />');
+                $("#co_res_image").attr("src", "/mi/result.png?" + new Date().getTime()); // refresh the image cache
             }
         }
     };

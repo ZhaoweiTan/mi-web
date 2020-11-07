@@ -145,8 +145,8 @@ function run_analysis() {
             // $('#result_modal').modal('show');
             $('#analysis_result').scrollTop($('#log_scroll').prop('scrollHeight'));
             $('#analysis_result').html(returndata);
+            $('#img_container').html('<img id="res_image" style="width:100%" src="mi/result.png" />');
             $("#res_image").attr("src", "/mi/result.png?" + new Date().getTime()); // refresh the image cache
-            $('#img_result').html('<img id="res_image" style="width:100%" src="mi/result.png" />');
         },
         error: function(xhr, status, error){
             var errorMessage = xhr.status + ': ' + xhr.statusText;

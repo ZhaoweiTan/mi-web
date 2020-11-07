@@ -4,7 +4,7 @@
     <div class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-9 col-md-6 col-sm-6">
+                <div class="col-md-6">
                     <div class="card card-stats">
                         <div class="card-header card-header-warning card-header-icon">
                             <div class="card-icon">
@@ -35,9 +35,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-6 col-sm-6">
+                <div class="col-md-6">
                     <div class="card card-stats">
                         <div class="card-header card-header-info card-header-icon">
                             <div class="card-icon">
@@ -73,23 +71,19 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div class="modal fade " id="result_modal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Analysis Result</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" style="text-align: left; overflow-y: auto;" >
-                    <div style="text-align: left; width: 100%" id="analysis_scroll">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 80%; height: 400px; margin: 0 auto; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="analysis_scroll">
+                        <h4 class="card-title" style="text-align: center;"><i>Analysis Result</i></h4> <hr/>
                         <p id="analysis_result"></p>
+                        <div style="text-align: center" id="img_container"> </div>
                     </div>
-                    <div style="text-align: left" id="img_container">
+                </div>
+                <div class="col-md-6">
+                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 80%; height: 400px; margin: 0 auto; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="co_analysis_scroll">
+                        <h4 class="card-title" style="text-align: center;"><i>Co-Analysis Result</i></h4> <hr/>
+                        <p id="co_analysis_result"></p>
+                        <div style="text-align: center" id="co_img_container"> </div>
                     </div>
                 </div>
             </div>

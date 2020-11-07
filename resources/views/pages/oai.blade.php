@@ -66,21 +66,25 @@
                 </div>
             </div>
             <div class="row">
-                    <nav id="navbar-example2" class="navbar navbar-light bg-light" style="width: 100%; height: 200px;">
-                        <a class="navbar-brand" href="#">Execution Log</a>
-                        <a class="navbar-brand" href="#">Filter the log by keyword:</a>
-                        <input class="form-control" id="filter" placeholder="Keyword (E.g. SCTP)">
-                        <a href="log/log.txt" download="log.txt" class="btn btn-primary" id="download_button" role="button" style="margin: auto;">Download This Log</a>
-                    </nav>
-                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 50%; height: 400px; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="log_scroll">
-                        <h4 class="card-title" style="text-align: center;"><i>OAI Log</i></h4>
+                <nav id="navbar-example2" class="navbar navbar-light bg-light" style="width: 100%; height: 200px;">
+                    <a class="navbar-brand" href="#">Execution Log</a>
+                    <a class="navbar-brand" href="#">Filter the log by keyword:</a>
+                    <input class="form-control" id="filter" placeholder="Keyword (E.g. SCTP)">
+                    <a href="log/log.txt" download="log.txt" class="btn btn-primary" id="download_button" role="button" style="margin: auto;">Download This Log</a>
+                </nav>
+                <div class="col-md-6">
+                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 80%; height: 400px; margin: 0 auto; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="log_scroll">
+                        <h4 style="text-align: center;"><i>OAI Log</i></h4> <hr/>
                         <p id="log_result"></p>
                     </div> 
-                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 50%; height: 400px; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="analysis_scroll">
-                        <h4 class="card-title" style="text-align: center;"><i>MobileInsight Analysis Result</i></h4>
+                </div> 
+                <div class="col-md-6">
+                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 80%; height: 400px; margin: 0 auto; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="analysis_scroll">
+                        <h4 style="text-align: center;"><i>MobileInsight Analysis Result</i></h4> <hr/>
                         <p id="analysis_result"></p>
-                        <div style="text-align: center" id="img_result">
+                        <div style="text-align: center" id="img_container"> </div>
                     </div> 
+                </div> 
             </div>
         </div>
     </div>
@@ -187,26 +191,6 @@
             </div>
         </div>
     </div>
-
-    <!-- <div class="modal fade " id="result_modal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Analysis Result</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" style="text-align: left; overflow-y: auto;" >
-                    <div style="text-align: left; width: 100%" id="analysis_scroll">
-                        <p id="analysis_result"></p>
-                    </div>
-                    <div style="text-align: left" id="img_container">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 @endsection
 
 @push('js')
