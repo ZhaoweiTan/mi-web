@@ -70,16 +70,16 @@
                     <a class="navbar-brand" href="#">Execution Log</a>
                     <a class="navbar-brand" href="#">Filter the log by keyword:</a>
                     <input class="form-control" id="filter" placeholder="Keyword (E.g. SCTP)">
-                    <a href="log/log.txt" download="log.txt" class="btn btn-primary" id="download_button" role="button" style="margin: auto;">Download This Log</a>
+                    <a href="oai_log/log.txt" download="log.txt" class="btn btn-primary" id="download_button" role="button" style="margin: auto;">Download This Log</a>
                 </nav>
                 <div class="col-md-6">
-                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 80%; height: 400px; margin: 0 auto; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="log_scroll">
+                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 100%; height: 400px; margin: 0 auto; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="log_scroll">
                         <h4 style="text-align: center;"><i>OAI Log</i></h4> <hr/>
                         <p id="log_result"></p>
                     </div> 
                 </div> 
                 <div class="col-md-6">
-                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 80%; height: 400px; margin: 0 auto; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="analysis_scroll">
+                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 100%; height: 400px; margin: 0 auto; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="analysis_scroll">
                         <h4 style="text-align: center;"><i>MobileInsight Analysis Result</i></h4> <hr/>
                         <p id="analysis_result"></p>
                         <div style="text-align: center" id="img_container"> </div>

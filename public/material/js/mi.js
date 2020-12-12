@@ -142,7 +142,6 @@ function run_analysis() {
             $('#analysis_button').html('Run Analysis');
 
             $('#mi_modal').modal('hide');
-            // $('#result_modal').modal('show');
             $('#analysis_result').scrollTop($('#log_scroll').prop('scrollHeight'));
             $('#analysis_result').html(returndata);
             $('#img_container').html('<img id="res_image" style="width:100%" src="mi/result.png" />');
@@ -156,7 +155,7 @@ function run_analysis() {
 }
 
 function stop_analysis() {
-    alert("MobileInsight analysis has been stopped");
+    alert("MobileInsight analysis has been stopped.");
     $('#real_time_analysis').prop('checked', false);
 }
 

@@ -34,7 +34,8 @@ class DashboardController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->isLocal = config('mi.local') == 'local' ? True : False;
+        // $this->isLocal = config('mi.local') == 'local' ? True : False;
+        $this->isLocal = False; // this is just for test. Need to change back to the above code when deploying.
     }
 
     /**
@@ -74,9 +75,14 @@ class DashboardController extends Controller
     {
         $this->generateConfig($request);
         if ($this->isLocal) {
-            $cmd = "ping -i 2 8.8.8.8 > ./log/log.txt";
+            $cmd = "ping -i 2 8.8.8.8 > ".public_path()."/oai_log/log.txt";
         } else {
-            $cmd = "sudo /home/wing/nfv/openairinterface5g/cmake_targets/lte_build_oai/build/lte-softmodem -O /var/www/html/mi/storage/app/tmp.conf -d 2>&1  | tee /var/www/html/mi/public/log/log.txt";
+            // $cmd = "source oaienv && sudo ./mi/openairinterface5g/cmake_targets/lte_build_oai/build/lte-softmodem -O /var/www/html/mi/storage/app/tmp.conf -d 2>&1  | tee ./log/log.txt";
+            $cmd = "cd ".public_path()."/mi/MI-eNB && ".
+                        // "source oaienv && ". ?? not work
+                        "cd cmake_targets/lte_build_oai/build && ".
+                        "ENODEB=1 sudo -E ./lte-softmodem -O ../../../ci-scripts/conf_files/enb_config.conf --basicsim --noS1 2>&1 ".
+                        "| tee ".public_path()."/oai_log/log.txt";
         }
         $rtn = exec($cmd);
         return response()->json($rtn);
@@ -86,9 +92,9 @@ class DashboardController extends Controller
     public function read_file(Request $request)
     {
         if ($this->isLocal) {
-            $myfile = fopen("./log/log.txt", "r") or die("Unable to open file!" . $myfile);
+            $myfile = fopen(public_path()."/oai_log/log.txt", "r") or die("Unable to open file!" . $myfile);
         } else {
-            $myfile = fopen("/var/www/html/mi/public/log/log.txt", "r") or die("Unable to open file!" . $myfile);
+            $myfile = fopen(public_path()."/oai_log/log.txt", "r") or die("Unable to open file!" . $myfile);
         }
         $res = "";
 
@@ -110,10 +116,10 @@ class DashboardController extends Controller
 
     public function run_analysis(Request $request) {
         if ($this->isLocal) {
-            $log_path = " log/log.txt";
+            $log_path = " oai_log/log.txt";
             $python_path = "python3";
         } else {
-            $log_path = " log/log.txt";
+            $log_path = " oai_log/log.txt";
             $python_path = "python3";
         }
 
@@ -136,9 +142,9 @@ class DashboardController extends Controller
 
     public function kill() {
         if ($this->isLocal) {
-            $cmd = "kill -9 `ps -A | grep ping | awk '{ print $1 }'` 2>&1";
+            $cmd = "sudo /bin/kill -9 `ps -A | grep ping | awk '{ print $1 }'` 2>&1";
         } else {
-            $cmd = "sudo kill -9 `ps -A | grep softmodem | awk '{ print $1 }'` 2>&1";
+            $cmd = "sudo /bin/kill -9 `ps -A | grep softmodem | awk '{ print $1 }'` 2>&1";
         }
         $rtn = exec($cmd);
         return response()->json($rtn);
@@ -513,7 +519,7 @@ $mi_string
         }
 
         $existed = false;
-        move_uploaded_file($log, "log/log_custom.txt");
+        move_uploaded_file($log, "oai_log/log_custom.txt");
         move_uploaded_file($script, "mi/custom.py");
         $analyzer_name = $analyzer->getClientOriginalName();
         if (file_exists("mi/$analyzer_name")) {
@@ -524,12 +530,12 @@ $mi_string
         }
 
         if ($this->isLocal) {
-            $python_path = "python3";  // TODO: change to user's real path
+            $python_path = "python3";
         } else {
             $python_path = "python3";
         }
 
-        $cmd = $python_path . " mi/custom.py log/log_custom.txt 2>&1";
+        $cmd = $python_path . " mi/custom.py oai_log/log_custom.txt 2>&1";
         $res = exec($cmd);
 
         if (strpos(strtolower($res), "error")) {
@@ -543,7 +549,7 @@ $mi_string
             unlink("mi/$analyzer_name");
         }
         unlink("mi/custom.py");
-        unlink("log/log_custom.txt");
+        unlink("oai_log/log_custom.txt");
         return response()->json($rtn_arr);
     }
 

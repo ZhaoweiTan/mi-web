@@ -73,14 +73,14 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 80%; height: 400px; margin: 0 auto; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="analysis_scroll">
+                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 100%; height: 400px; margin: 0 auto; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="analysis_scroll">
                         <h4 class="card-title" style="text-align: center;"><i>Analysis Result</i></h4> <hr/>
                         <p id="analysis_result"></p>
                         <div style="text-align: center" id="img_container"> </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 80%; height: 400px; margin: 0 auto; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="co_analysis_scroll">
+                    <div class="scroll" style="text-align: left; overflow-y: scroll; width: 100%; height: 400px; margin: 0 auto; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="co_analysis_scroll">
                         <h4 class="card-title" style="text-align: center;"><i>Co-Analysis Result</i></h4> <hr/>
                         <p id="co_analysis_result"></p>
                         <div style="text-align: center" id="co_img_container"> </div>

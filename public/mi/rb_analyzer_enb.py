@@ -48,7 +48,6 @@ class RBAnalyzer(Analyzer):
 
     def __msg_callback(self, msg):
         if msg.type_id == "LTE_PHY_PDSCH_Stat_Indication":
-            # return
             records = msg.data['Records']
             # print (records)
             for record in records:
