@@ -2,7 +2,7 @@ $(document).ready(function() {
     // Javascript method's body can be found in assets/js/demos.js
     md.initDashboardPageCharts();
     get_status();
-    setInterval("get_status()",5000);
+    setInterval("get_status()",1500);
     $('#config_band7').attr('checked', 'checked');
     $('#config_bandwidth10').attr('checked', 'checked');
 });
@@ -26,6 +26,7 @@ function get_status() {
                 $('#start_button').prop('disabled', true);
                 $('#start_button').addClass('btn-disabled');
                 $('#start_button').removeClass('btn-info');
+                $('#start_button').html('START');
                 $('#config_button').prop('disabled', true);
                 $('#config_button').addClass('btn-disabled');
                 $('#config_button').removeClass('btn-warning');
@@ -44,6 +45,7 @@ function get_status() {
                 $('#start_button').prop('disabled', false);
                 $('#start_button').addClass('btn-info');
                 $('#start_button').removeClass('btn-disabled');
+                $('#start_button').html('START');
                 $('#config_button').prop('disabled', false);
                 $('#config_button').addClass('btn-warning');
                 $('#config_button').removeClass('btn-disabled');
@@ -98,13 +100,26 @@ function kill() {
 }
 
 function start_oai() {
-    $('#conf_sys').prop("disabled",false);
-    $('#conf_mi').prop("disabled",false);
+    var set_config = false;
+    var miconfig = $('#miconfig_form').serializeArray();
+    for (var i = 0; i < miconfig.length; i++) {
+        if (miconfig[i]['value'] == 'on') {
+            set_config = true;
+            break;
+        }
+    }
+    if (!set_config) {
+        alert("Please set custom configuration before Start");
+        return;
+    }
+
+    $('#start_button').html('Processing...');
+
     $.ajax({
         type: "POST",
         url: "/oai/start",
         data: {
-            'miconfig': $('#miconfig_form').serializeArray(),
+            'miconfig': miconfig,
             'sysconfig': $('#sysconfig_form').serializeArray(),
         },
         dataType: 'json',

@@ -66,11 +66,11 @@
                 </div>
             </div>
             <div class="row">
-                <nav id="navbar-example2" class="navbar navbar-light bg-light" style="width: 100%; height: 200px;">
+                <nav id="navbar-example2" class="navbar navbar-light bg-light" style="width: 100%; height: 500px;">
                     <a class="navbar-brand" href="#">Execution Log</a>
                     <a class="navbar-brand" href="#">Filter the log by keyword:</a>
                     <input class="form-control" id="filter" placeholder="Keyword (E.g. SCTP)">
-                    <a href="oai_log/log.txt" download="log.txt" class="btn btn-primary" id="download_button" role="button" style="margin: auto;">Download This Log</a>
+                    <a href="mi/oai_log/oai_enb_log.txt" download="log.txt" class="btn btn-primary" id="download_button" role="button" style="margin: auto;">Download This Log</a>
                 </nav>
                 <div class="col-md-6">
                     <div class="scroll" style="text-align: left; overflow-y: scroll; width: 100%; height: 400px; margin: 0 auto; background:#FFF; color:#000; padding-left: 20px; padding-top: 10px;", id="log_scroll">

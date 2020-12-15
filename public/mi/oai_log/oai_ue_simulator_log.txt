@@ -1,0 +1,884 @@
+[CONFIG] get parameters from cmdline , debug flags: 0x00400000
+# /dev/cpu_dma_latency set to 0us
+[CONFIG] log_config: 2/3 parameters successfully set 
+[CONFIG] log_config: 42/42 parameters successfully set 
+[CONFIG] log_config: 42/42 parameters successfully set 
+[CONFIG] log_config: 15/15 parameters successfully set 
+[CONFIG] log_config: 15/15 parameters successfully set 
+[CONFIG] mi_log_level: 7/7 parameters successfully set 
+LTE_PDCP_DL_Cipher_Data_PDU: 0
+LTE_PDCP_UL_Cipher_Data_PDU: 0
+LTE_MAC_DL_Transport_Block: 0
+LTE_MAC_UL_Transport_Block: 0
+LTE_RLC_UL_AM_All_PDU: 0
+LTE_RLC_DL_AM_All_PDU: 0
+LTE_RRC_Event: 0
+log init done
+Reading in command-line options
+[CONFIG] (root): 19/22 parameters successfully set 
+[CONFIG] (root): 4/5 parameters successfully set 
+[0m[ENB_APP]   nfapi running mode: MONOLITHIC
+[0mRunning with 1 UE instances
+[CONFIG] TTracer: 4/4 parameters successfully set 
+CPU Freq is 2.624689 
+ITTI init
+[0m[TMR]   Starting itti queue: TASK_UNKNOWN as task 0
+[0m[0m[TMR]   Starting itti queue: TASK_TIMER as task 1
+[0m[0m[TMR]   Starting itti queue: TASK_L2L1 as task 2
+[0m[0m[TMR]   Starting itti queue: TASK_BM as task 3
+[0m[0m[TMR]   Starting itti queue: TASK_PHY_ENB as task 4
+[0m[0m[TMR]   Starting itti queue: TASK_MAC_ENB as task 5
+[0m[0m[TMR]   Starting itti queue: TASK_RLC_ENB as task 6
+[0m[0m[TMR]   Starting itti queue: TASK_RRC_ENB_NB_IoT as task 7
+[0m[0m[TMR]   Starting itti queue: TASK_PDCP_ENB as task 8
+[0m[0m[TMR]   Starting itti queue: TASK_DATA_FORWARDING as task 9
+[0m[0m[TMR]   Starting itti queue: TASK_END_MARKER as task 10
+[0m[0m[TMR]   Starting itti queue: TASK_RRC_ENB as task 11
+[0m[0m[TMR]   Starting itti queue: TASK_RAL_ENB as task 12
+[0m[0m[TMR]   Starting itti queue: TASK_S1AP as task 13
+[0m[0m[TMR]   Starting itti queue: TASK_X2AP as task 14
+[0m[0m[TMR]   Starting itti queue: TASK_SCTP as task 15
+[0m[0m[TMR]   Starting itti queue: TASK_ENB_APP as task 16
+[0m[0m[TMR]   Starting itti queue: TASK_FLEXRAN_AGENT as task 17
+[0m[0m[TMR]   Starting itti queue: TASK_PHY_UE as task 18
+[0m[0m[TMR]   Starting itti queue: TASK_MAC_UE as task 19
+[0m[0m[TMR]   Starting itti queue: TASK_RLC_UE as task 20
+[0m[0m[TMR]   Starting itti queue: TASK_PDCP_UE as task 21
+[0m[0m[TMR]   Starting itti queue: TASK_RRC_UE as task 22
+[0m[0m[TMR]   Starting itti queue: TASK_NAS_UE as task 23
+[0m[0m[TMR]   Starting itti queue: TASK_RAL_UE as task 24
+[0m[0m[TMR]   Starting itti queue: TASK_MSC as task 25
+[0m[0m[TMR]   Starting itti queue: TASK_GTPV1_U as task 26
+[0m[0m[TMR]   Starting itti queue: TASK_UDP as task 27
+[0m[0m[TMR]   Starting itti queue: TASK_CU_F1 as task 28
+[0m[0m[TMR]   Starting itti queue: TASK_DU_F1 as task 29
+[0m[CONFIG] opt: 3/3 parameters successfully set 
+[0m[OPT]   OPT disabled
+[0m[0m[PDCP]   pdcp init,usegtp usenetlink
+[0m[CONFIG] nas.noS1: 3/3 parameters successfully set 
+[NETLINK]Opened socket oaitun_ue1 with fd 66
+[0m[PDCP]   UE pdcp will use tun interface
+[0mRRC control socket
+PDCP PC5S socket
+reported resolution = 1 ns
+[0m[HW]   Version: Branch: wing Abrev. Hash: b38734604 Date: Sun Dec 13 13:55:06 2020 -0800
+[0mCard 0, channel 0, Setting tx_gain 20.000000, rx_gain 125.000000, tx_freq 2350000000.000000, rx_freq 2350000000.000000
+Card 0, channel 1, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 0, channel 2, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 0, channel 3, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+[0m[PHY]   USRP clock source not specified. defaulting to internal
+[0mCard 1, channel 0, Setting tx_gain 20.000000, rx_gain 125.000000, tx_freq 2350000000.000000, rx_freq 2350000000.000000
+Card 1, channel 1, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 1, channel 2, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 1, channel 3, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+[0m[PHY]   USRP clock source not specified. defaulting to internal
+[0mCard 2, channel 0, Setting tx_gain 20.000000, rx_gain 125.000000, tx_freq 2350000000.000000, rx_freq 2350000000.000000
+Card 2, channel 1, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 2, channel 2, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 2, channel 3, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+[0m[PHY]   USRP clock source not specified. defaulting to internal
+[0mCard 3, channel 0, Setting tx_gain 20.000000, rx_gain 125.000000, tx_freq 2350000000.000000, rx_freq 2350000000.000000
+Card 3, channel 1, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 3, channel 2, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 3, channel 3, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+[0m[PHY]   USRP clock source not specified. defaulting to internal
+[0mCard 4, channel 0, Setting tx_gain 20.000000, rx_gain 125.000000, tx_freq 2350000000.000000, rx_freq 2350000000.000000
+Card 4, channel 1, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 4, channel 2, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 4, channel 3, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+[0m[PHY]   USRP clock source not specified. defaulting to internal
+[0mCard 5, channel 0, Setting tx_gain 20.000000, rx_gain 125.000000, tx_freq 2350000000.000000, rx_freq 2350000000.000000
+Card 5, channel 1, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 5, channel 2, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 5, channel 3, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+[0m[PHY]   USRP clock source not specified. defaulting to internal
+[0mCard 6, channel 0, Setting tx_gain 20.000000, rx_gain 125.000000, tx_freq 2350000000.000000, rx_freq 2350000000.000000
+Card 6, channel 1, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 6, channel 2, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 6, channel 3, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+[0m[PHY]   USRP clock source not specified. defaulting to internal
+[0mCard 7, channel 0, Setting tx_gain 20.000000, rx_gain 125.000000, tx_freq 2350000000.000000, rx_freq 2350000000.000000
+Card 7, channel 1, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 7, channel 2, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 7, channel 3, Setting tx_gain 0.000000, rx_gain 125.000000, tx_freq 0.000000, rx_freq 0.000000
+[0m[PHY]   USRP clock source not specified. defaulting to internal
+[0m[0m[RRC]   Listening to incoming connection from ProSe App 
+[0mCPU Freq is 2.651610 
+NO deadline scheduler
+[0m[HW]   CPU Affinity of main() function is...  CPU_0  CPU_1 
+[0m[0m[TMR]   Created Posix thread TASK_RRC_UE
+[0mITTI tasks created
+[0m[PHY]   UE : Calling Layer 2 for initialization
+[0m[0m[MAC]   [MAIN] MAC_INIT_GLOBAL_PARAM IN...
+[0m[0m[MAC]   [MAIN] CALLING RLC_MODULE_INIT...
+[0m[0m[PDCP]   PDCP layer has been initialized
+[0m[0m[MAC]   [MAIN] Init Global Param Done
+[0m[0m[MAC]   [MAIN] init UE MAC functions 
+[0m[0m[MAC]   [MAIN] Init function start:Nb_UE_INST=1
+[0m[0m[MAC]   [UE0] Applying default macMainConfig
+[0m[0m[MAC]   [MAIN] calling RRC
+[0m[0m[RRC]   Allocating 408 bytes for UE_EUTRA_Capability
+[0m[0m[PHY]   [RRC]UE Capability encoded, 15 bytes (120 bits)
+[0m[0m[RRC]   [UE] eMBMS active state is 0 
+[0m[0m[MAC]   [MAIN][INIT] Init function finished
+[0m[0m[PHY]   Allocating UE context 0
+[0m[0m[PHY]   Initializing frame parms for N_RB_DL 25, Ncp 0, osf 1
+[0m[0m[PHY]   lte_parms.c: Setting N_RB_DL to 25, ofdm_symbol_size 512
+[0m[CONFIG[LOADER] library libuescope.so is not loaded: libuescope.so: cannot open shared object file: No such file or directory
+] loader: 2/2 parameters successfully set 
+[CONFIG] loader.coding: 1/2 parameters successfully set 
+[LOADER] library libcoding.so successfully loaded
+[0m[PHY]   common_vars->rxdata[0] 0x7fafa9512040
+[0mPHY_vars_UE_g[0][0] = 0x7fafaed98010
+UE->mode = 0
+[0m[PHY]   Intializing UE Threads for instance 0 (0x55ebe57e7080,0x7fafaed98010)...
+[0mInit_UE_threads rtd 0 proc 0 nb_threads 2 i 0
+Init_UE_threads rtd 1 proc 1 nb_threads 2 i 1
+[CONFIG] loader.tcp_bridge_oai: 1/2 parameters successfully set 
+CPU Affinity of thread UE_0_proc_1 is  0  1 
+CPU Affinity of thread UE_0_proc_0 is  0  1 
+[LOADER] library libtcp_bridge_oai.so successfully loaded
+tcp_bridge: running as UE
+[0m[HW]   [RRU] has loaded USRP B200 device.
+[0mUE threads created by 4780
+Filling UE band info
+Band 3 (3) : DL 1805000000..1880000000 Hz, UL 1710000000..1785000000 Hz, Duplex FDD 
+Band 20 (20) : DL 791000000..821000000 Hz, UL 832000000..862000000 Hz, Duplex FDD 
+Band 7 (7) : DL 2620000000..2690000000 Hz, UL 2500000000..2570000000 Hz, Duplex FDD 
+Band 38 (38) : DL 2570000000..2630000000 Hz, UL 2570000000..2620000000 Hz, Duplex TDD 
+[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] Init...
+[0m[0m[RRC]   [UE 0] INIT State = RRC_IDLE (eNB 0)
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] UE?:OPENAIR RRC IN....
+[0m[CONFIG] loader.uescope: 1/2 parameters successfully set 
+CPU Affinity of thread UHD Threads is  0  1 
+waiting for sync (UE thread,-1/0x55ebe356f268,0x55ebe3c60300,0x55ebe3b165a0)
+Sending sync to all threads (0x55ebe356f268,0x55ebe3c60300,0x55ebe3b165a0)
+got sync (UE thread)
+tcp_bridge: Connection refused
+tcp_bridge: trying to connect to 127.0.0.1:4043
+sync sent
+TYPE <CTRL-C> TO TERMINATE
+Entering ITTI signals handler
+UE_thread_sync in with PHY_vars_UE 0x7fafaed98010
+CPU Affinity of thread sync UE 0
+ is  0  1 
+starting UE synch thread (IC -1)
+Scanning band 1, dl_min 2110000000, ul_min 1920000000
+Scanning band 2, dl_min 1930000000, ul_min 1850000000
+Scanning band 3, dl_min 1805000000, ul_min 1710000000
+Scanning band 4, dl_min 2110000000, ul_min 1710000000
+Scanning band 5, dl_min 869000000, ul_min 824000000
+Scanning band 6, dl_min 875000000, ul_min 830000000
+Scanning band 7, dl_min 2620000000, ul_min 2500000000
+Scanning band 8, dl_min 925000000, ul_min 880000000
+Scanning band 9, dl_min 1844900000, ul_min 1749900000
+Scanning band 10, dl_min 2110000000, ul_min 1710000000
+Scanning band 11, dl_min 1475900000, ul_min 1427900000
+Scanning band 12, dl_min 728000000, ul_min 698000000
+Scanning band 13, dl_min 746000000, ul_min 777000000
+Scanning band 14, dl_min 758000000, ul_min 788000000
+Scanning band 17, dl_min 734000000, ul_min 704000000
+Scanning band 20, dl_min 791000000, ul_min 832000000
+Scanning band 22, dl_min 3410000000, ul_min 3510000000
+Scanning band 33, dl_min 1900000000, ul_min 1900000000
+Scanning band 34, dl_min 2010000000, ul_min 2010000000
+Scanning band 35, dl_min 1850000000, ul_min 1850000000
+Scanning band 36, dl_min 1930000000, ul_min 1930000000
+Scanning band 37, dl_min 1910000000, ul_min 1910000000
+Scanning band 38, dl_min 2570000000, ul_min 2570000000
+Scanning band 39, dl_min 1880000000, ul_min 1880000000
+Scanning band 40, dl_min 2300000000, ul_min 2300000000
+[0m[PHY]   [SCHED][UE] Check absolute frequency DL 2350000000, UL 0 (oai_exit 0, rx_num_channels 1)
+[0mwaiting for sync (UE_thread_sync,0/0x55ebe356f268,0x55ebe3c60300,0x55ebe3b165a0)
+got sync (UE_thread_sync)
+Started device, unlocked sync_mutex (UE_sync_thread)
+tcp_bridge: trying to connect to 127.0.0.1:4043
+tcp_bridge: connection established
+ue sync not ready
+[0m[PHY]   [UE thread Synch] Running Initial Synch (mode 0)
+[0m[0m[PHY]   Initializing frame parms for N_RB_DL 25, Ncp 0, osf 1
+[0m[0m[PHY]   lte_parms.c: Setting N_RB_DL to 25, ofdm_symbol_size 512
+[0m[0m[PHY]   [UE] lte_sync_time: Sync source = 0, Peak found at pos 8888, val = 58364192 (38 dB)
+[0m[0m[PHY]   Initializing frame parms for N_RB_DL 25, Ncp 0, osf 1
+[0m[0m[PHY]   lte_parms.c: Setting N_RB_DL to 25, ofdm_symbol_size 512
+[0m[0m[PHY]   Initializing frame parms for N_RB_DL 25, Ncp 1, osf 1
+[0m[0m[PHY]   lte_parms.c: Setting N_RB_DL to 25, ofdm_symbol_size 512
+[0m[0m[PHY]   Initializing frame parms for N_RB_DL 25, Ncp 1, osf 1
+[0m[0m[PHY]   lte_parms.c: Setting N_RB_DL to 25, ofdm_symbol_size 512
+[0m[0m[1;31m[PHY]   Not yet implemented: noise power calculation when prefix length == EXTENDED
+[0m[0m[1;31m[PHY]   Not yet implemented: noise power calculation when prefix length == EXTENDED
+[0m[0m[PHY]   FeMBMS CAS Extended prefix: CellId 396 metric 23, phase 4, flip 1, pbch -1
+[0m[0m[PHY]   Initializing frame parms for N_RB_DL 25, Ncp 0, osf 1
+[0m[0m[PHY]   lte_parms.c: Setting N_RB_DL to 25, ofdm_symbol_size 512
+[0m[0m[PHY]   Initializing frame parms for N_RB_DL 25, Ncp 0, osf 1
+[0m[0m[PHY]   lte_parms.c: Setting N_RB_DL to 25, ofdm_symbol_size 512
+[0m[0m[PHY]   [UE0] In synch, rx_offset 72 samples
+[0mpcfich_reg : 0,12,25,37
+[0m[PHY]   [UE 0] Frame 8 RRC Measurements => rssi -73.2 dBm (dig 51.8 dB, gain 125), N0 -152 dBm,  rsrp -97.9 dBm/RE, rsrq 9.0 dB
+[0m[0m[PHY]   [UE 0] Frame 8 MIB Information => TDD, NORMAL, NidCell 0, N_RB_DL 25, PHICH DURATION 0, PHICH RESOURCE 1/6, TX_ANT 1
+[0m[0m[PHY]   [UE 0] Frame 8 Measured Carrier Frequency 2350000032 Hz (offset -32 Hz)
+[0m[0m[HW]   Got synch: hw_slot_offset 0, carrier off 0 Hz, rxgain 125 (DL 2350000000, UL 2350000000), UE_scan_carrier 0
+[0mue sync not ready
+ue sync not ready
+[0m[PHY]   Initializing frame parms for N_RB_DL 25, Ncp 0, osf 1
+[0m[0m[PHY]   lte_parms.c: Setting N_RB_DL to 25, ofdm_symbol_size 512
+[0m[0m[PHY]   Resynchronizing RX by 72 samples (mode = 0)
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] Init...
+[0m[0m[RRC]   [UE 0] INIT State = RRC_IDLE (eNB 0)
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] UE?:OPENAIR RRC IN....
+[0m[UE 0] frame 12, subframe 0: Adjusting frame counter (PBCH ant_tx=1, frame_tx=12, phase 0, rx_offset 0) => new frame 12
+[UE 0] frame 12, subframe 0: Adjusting frame counter (PBCH ant_tx=1, frame_tx=12, phase 0, rx_offset 0) => new frame 12
+[0m[RRC]   [UE 0] : Dumping SIB 1
+[0m[0m[RRC]   PLMN MCC 208, MNC 93, TAC 0x0001
+[0m[0m[RRC]   cellReservedForOperatorUse                 : raw:1 decoded:notReserved
+[0m[0m[RRC]   Found Unknown operator (no entry in internal table)
+[0m[0m[RRC]   cellAccessRelatedInfo.cellIdentity         : raw:3584 decoded:00.00.e0.00
+[0m[0m[RRC]   cellAccessRelatedInfo.cellBarred           : raw:1 decoded:notBarred
+[0m[0m[RRC]   cellAccessRelatedInfo.intraFreqReselection : raw:1 decoded:notAllowed
+[0m[0m[RRC]   cellAccessRelatedInfo.csg_Indication       : 0
+[0m[0m[RRC]   cellAccessRelatedInfo.csg_Identity         : not defined
+[0m[0m[RRC]   cellSelectionInfo.q_RxLevMin               : -65
+[0m[0m[RRC]   cellSelectionInfo.q_RxLevMinOffset         : not defined
+[0m[0m[RRC]   p_Max                                      : not defined
+[0m[0m[RRC]   freqBandIndicator                          : 40
+[0m[0m[RRC]   si_Periodicity[0]                          : rf8
+[0m[0m[RRC]   siSchedulingInfoSIBType[0]                 :  SIB3 
+[0m[0m[RRC]   TDD subframeAssignment                     : 1
+[0m[0m[RRC]   TDD specialSubframePatterns                : 0
+[0m[0m[RRC]   siWindowLength                             : 20ms
+[0m[0m[RRC]   systemInfoValueTag                         : 0
+[0m[0m[RRC]   [FRAME unknown][RRC_UE][MOD 00][][--- MAC_CONFIG_REQ (SIB1 params eNB 0) --->][MAC_UE][MOD 00][]
+[0m[0m[MAC]   [CONFIG][UE 0] Configuring MAC/PHY from eNB 0
+[0m[0m[RRC]   Setting SIStatus bit 0 to 1
+[0m[0m[1;31m[RRC]   Synched with a cell, but PLMN doesn't match our SIM, the message PHY_FIND_NEXT_CELL_REQ is sent but lost in current UE implementation! 
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] Init...
+[0m[0m[RRC]   [UE 0] INIT State = RRC_IDLE (eNB 0)
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] UE?:OPENAIR RRC IN....
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] Init...
+[0m[0m[RRC]   [UE 0] INIT State = RRC_IDLE (eNB 0)
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] UE?:OPENAIR RRC IN....
+[0m[0m[RRC]   [UE 0] : Dumping SIB 1
+[0m[0m[RRC]   PLMN MCC 208, MNC 93, TAC 0x0001
+[0m[0m[RRC]   cellReservedForOperatorUse                 : raw:1 decoded:notReserved
+[0m[0m[RRC]   Found Unknown operator (no entry in internal table)
+[0m[0m[RRC]   cellAccessRelatedInfo.cellIdentity         : raw:3584 decoded:00.00.e0.00
+[0m[0m[RRC]   cellAccessRelatedInfo.cellBarred           : raw:1 decoded:notBarred
+[0m[0m[RRC]   cellAccessRelatedInfo.intraFreqReselection : raw:1 decoded:notAllowed
+[0m[0m[RRC]   cellAccessRelatedInfo.csg_Indication       : 0
+[0m[0m[RRC]   cellAccessRelatedInfo.csg_Identity         : not defined
+[0m[0m[RRC]   cellSelectionInfo.q_RxLevMin               : -65
+[0m[0m[RRC]   cellSelectionInfo.q_RxLevMinOffset         : not defined
+[0m[0m[RRC]   p_Max                                      : not defined
+[0m[0m[RRC]   freqBandIndicator                          : 40
+[0m[0m[RRC]   si_Periodicity[0]                          : rf8
+[0m[0m[RRC]   siSchedulingInfoSIBType[0]                 :  SIB3 
+[0m[0m[RRC]   TDD subframeAssignment                     : 1
+[0m[0m[RRC]   TDD specialSubframePatterns                : 0
+[0m[0m[RRC]   siWindowLength                             : 20ms
+[0m[0m[RRC]   systemInfoValueTag                         : 0
+[0m[0m[RRC]   [FRAME unknown][RRC_UE][MOD 00][][--- MAC_CONFIG_REQ (SIB1 params eNB 0) --->][MAC_UE][MOD 00][]
+[0m[0m[MAC]   [CONFIG][UE 0] Configuring MAC/PHY from eNB 0
+[0m[0m[RRC]   Setting SIStatus bit 0 to 1
+[0m[0m[1;31m[RRC]   Synched with a cell, but PLMN doesn't match our SIM, the message PHY_FIND_NEXT_CELL_REQ is sent but lost in current UE implementation! 
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] Init...
+[0m[0m[RRC]   [UE 0] INIT State = RRC_IDLE (eNB 0)
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] UE?:OPENAIR RRC IN....
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] Init...
+[0m[0m[RRC]   [UE 0] INIT State = RRC_IDLE (eNB 0)
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] UE?:OPENAIR RRC IN....
+[0m[0m[RRC]   [UE 0] : Dumping SIB 1
+[0m[0m[RRC]   PLMN MCC 208, MNC 93, TAC 0x0001
+[0m[0m[RRC]   cellReservedForOperatorUse                 : raw:1 decoded:notReserved
+[0m[0m[RRC]   Found Unknown operator (no entry in internal table)
+[0m[0m[RRC]   cellAccessRelatedInfo.cellIdentity         : raw:3584 decoded:00.00.e0.00
+[0m[0m[RRC]   cellAccessRelatedInfo.cellBarred           : raw:1 decoded:notBarred
+[0m[0m[RRC]   cellAccessRelatedInfo.intraFreqReselection : raw:1 decoded:notAllowed
+[0m[0m[RRC]   cellAccessRelatedInfo.csg_Indication       : 0
+[0m[0m[RRC]   cellAccessRelatedInfo.csg_Identity         : not defined
+[0m[0m[RRC]   cellSelectionInfo.q_RxLevMin               : -65
+[0m[0m[RRC]   cellSelectionInfo.q_RxLevMinOffset         : not defined
+[0m[0m[RRC]   p_Max                                      : not defined
+[0m[0m[RRC]   freqBandIndicator                          : 40
+[0m[0m[RRC]   si_Periodicity[0]                          : rf8
+[0m[0m[RRC]   siSchedulingInfoSIBType[0]                 :  SIB3 
+[0m[0m[RRC]   TDD subframeAssignment                     : 1
+[0m[0m[RRC]   TDD specialSubframePatterns                : 0
+[0m[0m[RRC]   siWindowLength                             : 20ms
+[0m[0m[RRC]   systemInfoValueTag                         : 0
+[0m[0m[RRC]   [FRAME unknown][RRC_UE][MOD 00][][--- MAC_CONFIG_REQ (SIB1 params eNB 0) --->][MAC_UE][MOD 00][]
+[0m[0m[MAC]   [CONFIG][UE 0] Configuring MAC/PHY from eNB 0
+[0m[0m[RRC]   Setting SIStatus bit 0 to 1
+[0m[0m[1;31m[RRC]   Synched with a cell, but PLMN doesn't match our SIM, the message PHY_FIND_NEXT_CELL_REQ is sent but lost in current UE implementation! 
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] Init...
+[0m[0m[RRC]   [UE 0] INIT State = RRC_IDLE (eNB 0)
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] UE?:OPENAIR RRC IN....
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] Init...
+[0m[0m[RRC]   [UE 0] INIT State = RRC_IDLE (eNB 0)
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] UE?:OPENAIR RRC IN....
+[0m[0m[RRC]   [UE 0] : Dumping SIB 1
+[0m[0m[RRC]   PLMN MCC 208, MNC 93, TAC 0x0001
+[0m[0m[RRC]   cellReservedForOperatorUse                 : raw:1 decoded:notReserved
+[0m[0m[RRC]   Found Unknown operator (no entry in internal table)
+[0m[0m[RRC]   cellAccessRelatedInfo.cellIdentity         : raw:3584 decoded:00.00.e0.00
+[0m[0m[RRC]   cellAccessRelatedInfo.cellBarred           : raw:1 decoded:notBarred
+[0m[0m[RRC]   cellAccessRelatedInfo.intraFreqReselection : raw:1 decoded:notAllowed
+[0m[0m[RRC]   cellAccessRelatedInfo.csg_Indication       : 0
+[0m[0m[RRC]   cellAccessRelatedInfo.csg_Identity         : not defined
+[0m[0m[RRC]   cellSelectionInfo.q_RxLevMin               : -65
+[0m[0m[RRC]   cellSelectionInfo.q_RxLevMinOffset         : not defined
+[0m[0m[RRC]   p_Max                                      : not defined
+[0m[0m[RRC]   freqBandIndicator                          : 40
+[0m[0m[RRC]   si_Periodicity[0]                          : rf8
+[0m[0m[RRC]   siSchedulingInfoSIBType[0]                 :  SIB3 
+[0m[0m[RRC]   TDD subframeAssignment                     : 1
+[0m[0m[RRC]   TDD specialSubframePatterns                : 0
+[0m[0m[RRC]   siWindowLength                             : 20ms
+[0m[0m[RRC]   systemInfoValueTag                         : 0
+[0m[0m[RRC]   [FRAME unknown][RRC_UE][MOD 00][][--- MAC_CONFIG_REQ (SIB1 params eNB 0) --->][MAC_UE][MOD 00][]
+[0m[0m[MAC]   [CONFIG][UE 0] Configuring MAC/PHY from eNB 0
+[0m[0m[RRC]   Setting SIStatus bit 0 to 1
+[0m[0m[1;31m[RRC]   Synched with a cell, but PLMN doesn't match our SIM, the message PHY_FIND_NEXT_CELL_REQ is sent but lost in current UE implementation! 
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] Init...
+[0m[0m[RRC]   [UE 0] INIT State = RRC_IDLE (eNB 0)
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] UE?:OPENAIR RRC IN....
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] Init...
+[0m[0m[RRC]   [UE 0] INIT State = RRC_IDLE (eNB 0)
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] UE?:OPENAIR RRC IN....
+[0m[0m[RRC]   [UE 0] : Dumping SIB 1
+[0m[0m[RRC]   PLMN MCC 208, MNC 93, TAC 0x0001
+[0m[0m[RRC]   cellReservedForOperatorUse                 : raw:1 decoded:notReserved
+[0m[0m[RRC]   Found Unknown operator (no entry in internal table)
+[0m[0m[RRC]   cellAccessRelatedInfo.cellIdentity         : raw:3584 decoded:00.00.e0.00
+[0m[0m[RRC]   cellAccessRelatedInfo.cellBarred           : raw:1 decoded:notBarred
+[0m[0m[RRC]   cellAccessRelatedInfo.intraFreqReselection : raw:1 decoded:notAllowed
+[0m[0m[RRC]   cellAccessRelatedInfo.csg_Indication       : 0
+[0m[0m[RRC]   cellAccessRelatedInfo.csg_Identity         : not defined
+[0m[0m[RRC]   cellSelectionInfo.q_RxLevMin               : -65
+[0m[0m[RRC]   cellSelectionInfo.q_RxLevMinOffset         : not defined
+[0m[0m[RRC]   p_Max                                      : not defined
+[0m[0m[RRC]   freqBandIndicator                          : 40
+[0m[0m[RRC]   si_Periodicity[0]                          : rf8
+[0m[0m[RRC]   siSchedulingInfoSIBType[0]                 :  SIB3 
+[0m[0m[RRC]   TDD subframeAssignment                     : 1
+[0m[0m[RRC]   TDD specialSubframePatterns                : 0
+[0m[0m[RRC]   siWindowLength                             : 20ms
+[0m[0m[RRC]   systemInfoValueTag                         : 0
+[0m[0m[RRC]   [FRAME unknown][RRC_UE][MOD 00][][--- MAC_CONFIG_REQ (SIB1 params eNB 0) --->][MAC_UE][MOD 00][]
+[0m[0m[MAC]   [CONFIG][UE 0] Configuring MAC/PHY from eNB 0
+[0m[0m[RRC]   Setting SIStatus bit 0 to 1
+[0m[0m[1;31m[RRC]   Synched with a cell, but PLMN doesn't match our SIM, the message PHY_FIND_NEXT_CELL_REQ is sent but lost in current UE implementation! 
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] Init...
+[0m[0m[RRC]   [UE 0] INIT State = RRC_IDLE (eNB 0)
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] UE?:OPENAIR RRC IN....
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] Init...
+[0m[0m[RRC]   [UE 0] INIT State = RRC_IDLE (eNB 0)
+[0m[0m[RRC]   [FRAME 00000][ UE][MOD 00][RNTI 0] UE?:OPENAIR RRC IN....
+[0m[0m[PHY]   [UE0] Sending synch status to higher layers
+[0m[0m[RRC]   [UE 0] : Dumping SIB 1
+[0m[0m[RRC]   PLMN MCC 208, MNC 93, TAC 0x0001
+[0m[0m[RRC]   cellReservedForOperatorUse                 : raw:1 decoded:notReserved
+[0m[0m[RRC]   Found Unknown operator (no entry in internal table)
+[0m[0m[RRC]   cellAccessRelatedInfo.cellIdentity         : raw:3584 decoded:00.00.e0.00
+[0m[0m[RRC]   cellAccessRelatedInfo.cellBarred           : raw:1 decoded:notBarred
+[0m[0m[RRC]   cellAccessRelatedInfo.intraFreqReselection : raw:1 decoded:notAllowed
+[0m[0m[RRC]   cellAccessRelatedInfo.csg_Indication       : 0
+[0m[0m[RRC]   cellAccessRelatedInfo.csg_Identity         : not defined
+[0m[0m[RRC]   cellSelectionInfo.q_RxLevMin               : -65
+[0m[0m[RRC]   cellSelectionInfo.q_RxLevMinOffset         : not defined
+[0m[0m[RRC]   p_Max                                      : not defined
+[0m[0m[RRC]   freqBandIndicator                          : 40
+[0m[0m[RRC]   si_Periodicity[0]                          : rf8
+[0m[0m[RRC]   siSchedulingInfoSIBType[0]                 :  SIB3 
+[0m[0m[RRC]   TDD subframeAssignment                     : 1
+[0m[0m[RRC]   TDD specialSubframePatterns                : 0
+[0m[0m[RRC]   siWindowLength                             : 20ms
+[0m[0m[RRC]   systemInfoValueTag                         : 0
+[0m[0m[RRC]   [FRAME unknown][RRC_UE][MOD 00][][--- MAC_CONFIG_REQ (SIB1 params eNB 0) --->][MAC_UE][MOD 00][]
+[0m[0m[MAC]   [CONFIG][UE 0] Configuring MAC/PHY from eNB 0
+[0m[0m[RRC]   Setting SIStatus bit 0 to 1
+[0m[0m[1;31m[RRC]   Synched with a cell, but PLMN doesn't match our SIM, the message PHY_FIND_NEXT_CELL_REQ is sent but lost in current UE implementation! 
+[0m[0m[RRC]   [UE 0] Decoding SI for frameP 25
+[0m[0m[RRC]   [UE 0] Frame 25 Found SIB2 from eNB 0
+[0m[0m[RRC]   ac_BarringInfo : not defined
+[0m[0m[RRC]   radioResourceConfigCommon.rach_ConfigCommon.preambleInfo.numberOfRA_Preambles  : raw:15 decoded:n64
+[0m[0m[RRC]   radioResourceConfigCommon.rach_ConfigCommon.preambleInfo.preamblesGroupAConfig : not defined
+[0m[0m[RRC]   radioResourceConfigCommon.rach_ConfigCommon.powerRampingParameters.powerRampingStep                   : raw:2 decoded:dB4
+[0m[0m[RRC]   radioResourceConfigCommon.rach_ConfigCommon.powerRampingParameters.preambleInitialReceivedTargetPower : raw:6 decoded:dBm-108
+[0m[0m[RRC]   radioResourceConfigCommon.rach_ConfigCommon.ra_SupervisionInfo.preambleTransMax              : raw:6 decoded:n10
+[0m[0m[RRC]   radioResourceConfigCommon.rach_ConfigCommon.ra_SupervisionInfo.ra_ResponseWindowSize         : raw:7 decoded:sf10
+[0m[0m[RRC]   radioResourceConfigCommon.rach_ConfigCommon.ra_SupervisionInfo.mac_ContentionResolutionTimer : raw:5 decoded:sf48
+[0m[0m[RRC]   radioResourceConfigCommon.rach_ConfigCommon.maxHARQ_Msg3Tx : 4
+[0m[0m[RRC]   radioResourceConfigCommon.bcch_Config.modificationPeriodCoeff : raw:0 decoded:n2
+[0m[0m[RRC]   radioResourceConfigCommon.pcch_Config.defaultPagingCycle : raw:2 decoded:rf64
+[0m[0m[RRC]   radioResourceConfigCommon.pcch_Config.nB                 : raw:2 decoded:oneT
+[0m[0m[RRC]   radioResourceConfigCommon.prach_Config.rootSequenceIndex                          : 0
+[0m[0m[RRC]   radioResourceConfigCommon.prach_Config.prach_ConfigInfo.prach_ConfigIndex         : 0
+[0m[0m[RRC]   radioResourceConfigCommon.prach_Config.prach_ConfigInfo.highSpeedFlag             : 0
+[0m[0m[RRC]   radioResourceConfigCommon.prach_Config.prach_ConfigInfo.zeroCorrelationZoneConfig : 1
+[0m[0m[RRC]   radioResourceConfigCommon.prach_Config.prach_ConfigInfo.prach_FreqOffset          : 2
+[0m[0m[RRC]   radioResourceConfigCommon.pdsch_ConfigCommon.referenceSignalPower : -27
+[0m[0m[RRC]   radioResourceConfigCommon.pdsch_ConfigCommon.p_b                  : 0
+[0m[0m[RRC]   radioResourceConfigCommon.pusch_ConfigCommon.pusch_ConfigBasic.n_SB                : 1
+[0m[0m[RRC]   radioResourceConfigCommon.pusch_ConfigCommon.pusch_ConfigBasic.hoppingMode         : 0
+[0m[0m[RRC]   radioResourceConfigCommon.pusch_ConfigCommon.pusch_ConfigBasic.pusch_HoppingOffset : 0
+[0m[0m[RRC]   radioResourceConfigCommon.pusch_ConfigCommon.pusch_ConfigBasic.enable64QAM         : 0
+[0m[0m[RRC]   radioResourceConfigCommon.pusch_ConfigCommon.ul_ReferenceSignalsPUSCH.groupHoppingEnabled    : 1
+[0m[0m[RRC]   radioResourceConfigCommon.pusch_ConfigCommon.ul_ReferenceSignalsPUSCH.groupAssignmentPUSCH   : 0
+[0m[0m[RRC]   radioResourceConfigCommon.pusch_ConfigCommon.ul_ReferenceSignalsPUSCH.sequenceHoppingEnabled : 0
+[0m[0m[RRC]   radioResourceConfigCommon.pusch_ConfigCommon.ul_ReferenceSignalsPUSCH.cyclicShift            : 1
+[0m[0m[RRC]   radioResourceConfigCommon.pucch_ConfigCommon.deltaPUCCH_Shift : 0
+[0m[0m[RRC]   radioResourceConfigCommon.pucch_ConfigCommon.nRB_CQI          : 1
+[0m[0m[RRC]   radioResourceConfigCommon.pucch_ConfigCommon.nCS_AN           : 0
+[0m[0m[RRC]   radioResourceConfigCommon.pucch_ConfigCommon.n1PUCCH_AN       : 0
+[0m[0m[RRC]   radioResourceConfigCommon.soundingRS_UL_ConfigCommon.present : raw:1 decoded:release
+[0m[0m[RRC]   radioResourceConfigCommon.uplinkPowerControlCommon.p0_NominalPUSCH   : -96
+[0m[0m[RRC]   radioResourceConfigCommon.uplinkPowerControlCommon.alpha             : 7
+[0m[0m[RRC]   radioResourceConfigCommon.uplinkPowerControlCommon.p0_NominalPUCCH   : -106
+[0m[0m[RRC]   radioResourceConfigCommon.uplinkPowerControlCommon.deltaFList_PUCCH.deltaF_PUCCH_Format1  : 2
+[0m[0m[RRC]   radioResourceConfigCommon.uplinkPowerControlCommon.deltaFList_PUCCH.deltaF_PUCCH_Format1b : 1
+[0m[0m[RRC]   radioResourceConfigCommon.uplinkPowerControlCommon.deltaFList_PUCCH.deltaF_PUCCH_Format2  : 1
+[0m[0m[RRC]   radioResourceConfigCommon.uplinkPowerControlCommon.deltaFList_PUCCH.deltaF_PUCCH_Format2a : 1
+[0m[0m[RRC]   radioResourceConfigCommon.uplinkPowerControlCommon.deltaFList_PUCCH.deltaF_PUCCH_Format2b : 1
+[0m[0m[RRC]   radioResourceConfigCommon.uplinkPowerControlCommon.deltaPreambleMsg3 : 6
+[0m[0m[RRC]   radioResourceConfigCommon.ul_CyclicPrefixLength : 0
+[0m[0m[RRC]   ue_TimersAndConstants.t300 : 5
+[0m[0m[RRC]   ue_TimersAndConstants.t301 : 5
+[0m[0m[RRC]   ue_TimersAndConstants.t310 : 5
+[0m[0m[RRC]   ue_TimersAndConstants.n310 : 7
+[0m[0m[RRC]   ue_TimersAndConstants.t311 : 3
+[0m[0m[RRC]   ue_TimersAndConstants.n311 : 0
+[0m[0m[RRC]   freqInfo.ul_CarrierFreq             : not defined
+[0m[0m[RRC]   freqInfo.ul_Bandwidth               : not defined
+[0m[0m[RRC]   freqInfo.additionalSpectrumEmission : 1
+[0m[0m[RRC]   mbsfn_SubframeConfigList : not defined
+[0m[0m[RRC]   timeAlignmentTimerCommon : 7
+[0m[0m[RRC]   lateNonCriticalExtension : not defined
+[0m[0m[RRC]   ssac_BarringForMMTEL_Voice_r9 : not defined
+[0m[0m[RRC]   ssac_BarringForMMTEL_Video_r9 : not defined
+[0m[0m[RRC]   ac_BarringForCSFB_r10 : not defined
+[0m[0m[RRC]   [FRAME 00025][RRC_UE][MOD 00][][--- MAC_CONFIG_REQ (SIB2 params  eNB 0) --->][MAC_UE][MOD 00][]
+[0m[0m[MAC]   [CONFIG][UE 0] Configuring MAC/PHY from eNB 0
+[0m[0m[PHY]   [UE0] Applying radioResourceConfigCommon from eNB0
+[0m[0m[RRC]   [UE 0] Received SIB1/SIB2/SIB3 Switching to RRC_SI_RECEIVED
+[0m[0m[RRC]   [UE 0] Frame 25 Found SIB3 from eNB 0
+[0m[0m[RRC]   Dumping SIB3 (see TS36.331 V8.21.0)
+[0m[0m[RRC]   cellReselectionInfoCommon.q_Hyst : raw:4  decoded:4 dB
+[0m[0m[RRC]   cellReselectionInfoCommon.speedStateReselectionPars : not defined
+[0m[0m[RRC]   cellReselectionServingFreqInfo.s_NonIntraSearch : not defined
+[0m[0m[RRC]   cellReselectionServingFreqInfo.threshServingLow : 31
+[0m[0m[RRC]   cellReselectionServingFreqInfo.cellReselectionPriority : 7
+[0m[0m[RRC]   intraFreqCellReselectionInfo.q_RxLevMin : -70
+[0m[0m[RRC]   intraFreqCellReselectionInfo.p_Max : not defined
+[0m[0m[RRC]   intraFreqCellReselectionInfo.s_IntraSearch : 31
+[0m[0m[RRC]   intraFreqCellReselectionInfo.allowedMeasBandwidth : 0
+[0m[0m[RRC]   intraFreqCellReselectionInfo.presenceAntennaPort1 : 0
+[0m[0m[RRC]   intraFreqCellReselectionInfo.neighCellConfig : 1
+[0m[0m[RRC]   intraFreqCellReselectionInfo.t_ReselectionEUTRA : 1
+[0m[0m[RRC]   intraFreqCellReselectionInfo.t_ReselectionEUTRA_SF : not defined
+[0m[0m[RRC]   SIStatus 7, SIcnt 1/1
+[0m[0m[RRC]   [UE 0] : Frame 25, Logical Channel UL-CCCH (SRB0), Generating RRCConnectionRequest (bytes 6, eNB 0)
+[0m[0m[MAC]   RA not active
+[0m[0m[RRC]   [MSC_MSG][FRAME 00026][RRC_UE][MOD 00][][--- MAC_DATA_REQ (RRCConnectionRequest eNB 0) --->][MAC_UE][MOD 00][]
+[0m[0m[MAC]   [UE 0] Frame 26: Requested RRCConnectionRequest, got 6 bytes
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -34 dBm (max 23 dBm), digital power 0 dB (amp 1)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 26, subframe 3: Generating PRACH (eNB 0) preamble index 42 for UL, TX power -34 dBm (PL 74 dB), l3msg 
+[0m[0m[MAC]   Received RRC_MAC_CCCH_DATA_REQ from TASK_RRC_UE: instance 0, frameP 26, eNB_index 0
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -30 dBm (max 23 dBm), digital power 0 dB (amp 2)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 28, subframe 3: Generating PRACH (eNB 0) preamble index 34 for UL, TX power -30 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -26 dBm (max 23 dBm), digital power 0 dB (amp 3)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 30, subframe 3: Generating PRACH (eNB 0) preamble index 3 for UL, TX power -26 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -22 dBm (max 23 dBm), digital power 0 dB (amp 5)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 32, subframe 3: Generating PRACH (eNB 0) preamble index 52 for UL, TX power -22 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -18 dBm (max 23 dBm), digital power 7 dB (amp 9)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 34, subframe 3: Generating PRACH (eNB 0) preamble index 9 for UL, TX power -18 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -14 dBm (max 23 dBm), digital power 13 dB (amp 14)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 36, subframe 3: Generating PRACH (eNB 0) preamble index 45 for UL, TX power -14 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -10 dBm (max 23 dBm), digital power 17 dB (amp 23)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 38, subframe 3: Generating PRACH (eNB 0) preamble index 57 for UL, TX power -10 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -6 dBm (max 23 dBm), digital power 23 dB (amp 37)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 40, subframe 3: Generating PRACH (eNB 0) preamble index 56 for UL, TX power -6 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -2 dBm (max 23 dBm), digital power 24 dB (amp 58)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 42, subframe 3: Generating PRACH (eNB 0) preamble index 54 for UL, TX power -2 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -34 dBm (max 23 dBm), digital power 0 dB (amp 1)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 44, subframe 3: Generating PRACH (eNB 0) preamble index 24 for UL, TX power -34 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -30 dBm (max 23 dBm), digital power 0 dB (amp 2)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 46, subframe 3: Generating PRACH (eNB 0) preamble index 42 for UL, TX power -30 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -26 dBm (max 23 dBm), digital power 0 dB (amp 3)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 48, subframe 3: Generating PRACH (eNB 0) preamble index 62 for UL, TX power -26 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -22 dBm (max 23 dBm), digital power 0 dB (amp 5)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 50, subframe 3: Generating PRACH (eNB 0) preamble index 27 for UL, TX power -22 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -18 dBm (max 23 dBm), digital power 6 dB (amp 9)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 52, subframe 3: Generating PRACH (eNB 0) preamble index 13 for UL, TX power -18 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -14 dBm (max 23 dBm), digital power 13 dB (amp 14)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 54, subframe 3: Generating PRACH (eNB 0) preamble index 26 for UL, TX power -14 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -10 dBm (max 23 dBm), digital power 17 dB (amp 23)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 56, subframe 3: Generating PRACH (eNB 0) preamble index 35 for UL, TX power -10 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -6 dBm (max 23 dBm), digital power 23 dB (amp 37)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 58, subframe 3: Generating PRACH (eNB 0) preamble index 57 for UL, TX power -6 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -2 dBm (max 23 dBm), digital power 24 dB (amp 58)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 60, subframe 3: Generating PRACH (eNB 0) preamble index 29 for UL, TX power -2 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -34 dBm (max 23 dBm), digital power 0 dB (amp 1)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 62, subframe 3: Generating PRACH (eNB 0) preamble index 53 for UL, TX power -34 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -30 dBm (max 23 dBm), digital power 0 dB (amp 2)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 64, subframe 3: Generating PRACH (eNB 0) preamble index 38 for UL, TX power -30 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -26 dBm (max 23 dBm), digital power 0 dB (amp 3)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 66, subframe 3: Generating PRACH (eNB 0) preamble index 62 for UL, TX power -26 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -22 dBm (max 23 dBm), digital power 0 dB (amp 5)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 68, subframe 3: Generating PRACH (eNB 0) preamble index 0 for UL, TX power -22 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -18 dBm (max 23 dBm), digital power 7 dB (amp 9)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 70, subframe 3: Generating PRACH (eNB 0) preamble index 11 for UL, TX power -18 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -14 dBm (max 23 dBm), digital power 13 dB (amp 14)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 72, subframe 3: Generating PRACH (eNB 0) preamble index 35 for UL, TX power -14 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -10 dBm (max 23 dBm), digital power 17 dB (amp 23)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 74, subframe 3: Generating PRACH (eNB 0) preamble index 58 for UL, TX power -10 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -6 dBm (max 23 dBm), digital power 23 dB (amp 37)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 76, subframe 3: Generating PRACH (eNB 0) preamble index 11 for UL, TX power -6 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -2 dBm (max 23 dBm), digital power 24 dB (amp 58)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 78, subframe 3: Generating PRACH (eNB 0) preamble index 36 for UL, TX power -2 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -34 dBm (max 23 dBm), digital power 0 dB (amp 1)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 80, subframe 3: Generating PRACH (eNB 0) preamble index 51 for UL, TX power -34 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -30 dBm (max 23 dBm), digital power 0 dB (amp 2)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 82, subframe 3: Generating PRACH (eNB 0) preamble index 61 for UL, TX power -30 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -26 dBm (max 23 dBm), digital power 0 dB (amp 3)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 84, subframe 3: Generating PRACH (eNB 0) preamble index 62 for UL, TX power -26 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -22 dBm (max 23 dBm), digital power 0 dB (amp 5)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 86, subframe 3: Generating PRACH (eNB 0) preamble index 61 for UL, TX power -22 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -18 dBm (max 23 dBm), digital power 7 dB (amp 9)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 88, subframe 3: Generating PRACH (eNB 0) preamble index 53 for UL, TX power -18 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -14 dBm (max 23 dBm), digital power 13 dB (amp 14)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 90, subframe 3: Generating PRACH (eNB 0) preamble index 56 for UL, TX power -14 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -10 dBm (max 23 dBm), digital power 17 dB (amp 23)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 92, subframe 3: Generating PRACH (eNB 0) preamble index 29 for UL, TX power -10 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -6 dBm (max 23 dBm), digital power 23 dB (amp 37)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 94, subframe 3: Generating PRACH (eNB 0) preamble index 49 for UL, TX power -6 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -2 dBm (max 23 dBm), digital power 24 dB (amp 58)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 96, subframe 3: Generating PRACH (eNB 0) preamble index 55 for UL, TX power -2 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -34 dBm (max 23 dBm), digital power 0 dB (amp 1)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 98, subframe 3: Generating PRACH (eNB 0) preamble index 63 for UL, TX power -34 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -30 dBm (max 23 dBm), digital power 0 dB (amp 2)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 100, subframe 3: Generating PRACH (eNB 0) preamble index 46 for UL, TX power -30 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -26 dBm (max 23 dBm), digital power 0 dB (amp 3)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 102, subframe 3: Generating PRACH (eNB 0) preamble index 29 for UL, TX power -26 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -22 dBm (max 23 dBm), digital power 0 dB (amp 5)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 104, subframe 3: Generating PRACH (eNB 0) preamble index 19 for UL, TX power -22 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -18 dBm (max 23 dBm), digital power 7 dB (amp 9)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 106, subframe 3: Generating PRACH (eNB 0) preamble index 7 for UL, TX power -18 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -14 dBm (max 23 dBm), digital power 13 dB (amp 14)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 108, subframe 3: Generating PRACH (eNB 0) preamble index 39 for UL, TX power -14 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -10 dBm (max 23 dBm), digital power 17 dB (amp 23)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 110, subframe 3: Generating PRACH (eNB 0) preamble index 10 for UL, TX power -10 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -6 dBm (max 23 dBm), digital power 23 dB (amp 37)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 112, subframe 3: Generating PRACH (eNB 0) preamble index 38 for UL, TX power -6 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -2 dBm (max 23 dBm), digital power 24 dB (amp 58)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 114, subframe 3: Generating PRACH (eNB 0) preamble index 31 for UL, TX power -2 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -34 dBm (max 23 dBm), digital power 0 dB (amp 1)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 116, subframe 3: Generating PRACH (eNB 0) preamble index 52 for UL, TX power -34 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -30 dBm (max 23 dBm), digital power 0 dB (amp 2)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 118, subframe 3: Generating PRACH (eNB 0) preamble index 22 for UL, TX power -30 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -26 dBm (max 23 dBm), digital power 0 dB (amp 3)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 120, subframe 3: Generating PRACH (eNB 0) preamble index 42 for UL, TX power -26 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -22 dBm (max 23 dBm), digital power 0 dB (amp 5)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 122, subframe 3: Generating PRACH (eNB 0) preamble index 10 for UL, TX power -22 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -18 dBm (max 23 dBm), digital power 7 dB (amp 9)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 124, subframe 3: Generating PRACH (eNB 0) preamble index 59 for UL, TX power -18 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -14 dBm (max 23 dBm), digital power 13 dB (amp 14)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 126, subframe 3: Generating PRACH (eNB 0) preamble index 48 for UL, TX power -14 dBm (PL 74 dB), l3msg 
+[0m[0m[RRC]   [UE 0] : Frame 126, Logical Channel UL-CCCH (SRB0), Generating RRCConnectionRequest (bytes 6, eNB 0)
+[0m[0m[1;31m[MAC]   RRCConnectionSetup failed, returning to IDLE state
+[0m[0m[1;31m[PHY]   [UE 0] Frame 126, subframe 4 RRC Connection lost, returning to PRACH
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -10 dBm (max 23 dBm), digital power 17 dB (amp 23)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 128, subframe 3: Generating PRACH (eNB 0) preamble index 42 for UL, TX power -10 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -6 dBm (max 23 dBm), digital power 23 dB (amp 37)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 130, subframe 3: Generating PRACH (eNB 0) preamble index 2 for UL, TX power -6 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -2 dBm (max 23 dBm), digital power 24 dB (amp 58)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 132, subframe 3: Generating PRACH (eNB 0) preamble index 18 for UL, TX power -2 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -34 dBm (max 23 dBm), digital power 0 dB (amp 1)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 134, subframe 3: Generating PRACH (eNB 0) preamble index 32 for UL, TX power -34 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -30 dBm (max 23 dBm), digital power 0 dB (amp 2)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 136, subframe 3: Generating PRACH (eNB 0) preamble index 52 for UL, TX power -30 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -26 dBm (max 23 dBm), digital power 0 dB (amp 3)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 138, subframe 3: Generating PRACH (eNB 0) preamble index 53 for UL, TX power -26 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -22 dBm (max 23 dBm), digital power 0 dB (amp 5)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 140, subframe 3: Generating PRACH (eNB 0) preamble index 54 for UL, TX power -22 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -18 dBm (max 23 dBm), digital power 7 dB (amp 9)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 142, subframe 3: Generating PRACH (eNB 0) preamble index 35 for UL, TX power -18 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -14 dBm (max 23 dBm), digital power 13 dB (amp 14)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 144, subframe 3: Generating PRACH (eNB 0) preamble index 9 for UL, TX power -14 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -10 dBm (max 23 dBm), digital power 17 dB (amp 23)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 146, subframe 3: Generating PRACH (eNB 0) preamble index 41 for UL, TX power -10 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -6 dBm (max 23 dBm), digital power 23 dB (amp 37)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 148, subframe 3: Generating PRACH (eNB 0) preamble index 2 for UL, TX power -6 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -2 dBm (max 23 dBm), digital power 24 dB (amp 58)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 150, subframe 3: Generating PRACH (eNB 0) preamble index 35 for UL, TX power -2 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -34 dBm (max 23 dBm), digital power 0 dB (amp 1)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 152, subframe 3: Generating PRACH (eNB 0) preamble index 54 for UL, TX power -34 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -30 dBm (max 23 dBm), digital power 0 dB (amp 2)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 154, subframe 3: Generating PRACH (eNB 0) preamble index 52 for UL, TX power -30 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -26 dBm (max 23 dBm), digital power 0 dB (amp 3)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 156, subframe 3: Generating PRACH (eNB 0) preamble index 1 for UL, TX power -26 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -22 dBm (max 23 dBm), digital power 0 dB (amp 5)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 158, subframe 3: Generating PRACH (eNB 0) preamble index 14 for UL, TX power -22 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -18 dBm (max 23 dBm), digital power 6 dB (amp 9)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 160, subframe 3: Generating PRACH (eNB 0) preamble index 41 for UL, TX power -18 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -14 dBm (max 23 dBm), digital power 13 dB (amp 14)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 162, subframe 3: Generating PRACH (eNB 0) preamble index 35 for UL, TX power -14 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -10 dBm (max 23 dBm), digital power 17 dB (amp 23)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 164, subframe 3: Generating PRACH (eNB 0) preamble index 6 for UL, TX power -10 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -6 dBm (max 23 dBm), digital power 23 dB (amp 37)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 166, subframe 3: Generating PRACH (eNB 0) preamble index 43 for UL, TX power -6 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -2 dBm (max 23 dBm), digital power 24 dB (amp 58)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 168, subframe 3: Generating PRACH (eNB 0) preamble index 62 for UL, TX power -2 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -34 dBm (max 23 dBm), digital power 0 dB (amp 1)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 170, subframe 3: Generating PRACH (eNB 0) preamble index 7 for UL, TX power -34 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -30 dBm (max 23 dBm), digital power 0 dB (amp 2)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 172, subframe 3: Generating PRACH (eNB 0) preamble index 62 for UL, TX power -30 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -26 dBm (max 23 dBm), digital power 0 dB (amp 3)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 174, subframe 3: Generating PRACH (eNB 0) preamble index 57 for UL, TX power -26 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -22 dBm (max 23 dBm), digital power 0 dB (amp 5)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 176, subframe 3: Generating PRACH (eNB 0) preamble index 9 for UL, TX power -22 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -18 dBm (max 23 dBm), digital power 7 dB (amp 9)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 178, subframe 3: Generating PRACH (eNB 0) preamble index 62 for UL, TX power -18 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -14 dBm (max 23 dBm), digital power 13 dB (amp 14)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 180, subframe 3: Generating PRACH (eNB 0) preamble index 11 for UL, TX power -14 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -10 dBm (max 23 dBm), digital power 18 dB (amp 23)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 182, subframe 3: Generating PRACH (eNB 0) preamble index 2 for UL, TX power -10 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -6 dBm (max 23 dBm), digital power 23 dB (amp 37)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 184, subframe 3: Generating PRACH (eNB 0) preamble index 42 for UL, TX power -6 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -2 dBm (max 23 dBm), digital power 24 dB (amp 58)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 186, subframe 3: Generating PRACH (eNB 0) preamble index 61 for UL, TX power -2 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -34 dBm (max 23 dBm), digital power 0 dB (amp 1)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 188, subframe 3: Generating PRACH (eNB 0) preamble index 21 for UL, TX power -34 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -30 dBm (max 23 dBm), digital power 0 dB (amp 2)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 190, subframe 3: Generating PRACH (eNB 0) preamble index 22 for UL, TX power -30 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -26 dBm (max 23 dBm), digital power 0 dB (amp 3)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 192, subframe 3: Generating PRACH (eNB 0) preamble index 22 for UL, TX power -26 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -22 dBm (max 23 dBm), digital power 0 dB (amp 5)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 194, subframe 3: Generating PRACH (eNB 0) preamble index 23 for UL, TX power -22 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -18 dBm (max 23 dBm), digital power 7 dB (amp 9)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 196, subframe 3: Generating PRACH (eNB 0) preamble index 21 for UL, TX power -18 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -14 dBm (max 23 dBm), digital power 13 dB (amp 14)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 198, subframe 3: Generating PRACH (eNB 0) preamble index 22 for UL, TX power -14 dBm (PL 74 dB), l3msg 
+[0m[0m[PHY]   mode 0
+[0m[0m[PHY]   [UE 0] prach_start 23040, rx_offset 0, hw_timing_advance 0, N_TA_offset 0
+[0m[0m[PHY]   [UE  0][RAPROC] PRACH PL 74 dB, power -10 dBm (max 23 dBm), digital power 17 dB (amp 23)
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 200, subframe 3: Generating PRACH (eNB 0) preamble index 8 for UL, TX power -10 dBm (PL 74 dB), l3msg 
+[0m[0m[MAC]   [UE 0][RAPROC] Frame 200 Received RAR (48|00.00.03.4c.0e.83) for preamble 8/8
+[0m[0m[PHY]   [UE 0][PUSCH PC] Initializing f_pusch to 14 dB, TPC 3 (delta_PUSCH_msg2 0 dB), deltaP_rampup 14 dB
+[0m[0m[PHY]   [UE  0][RAPROC] Frame 201, Subframe 7 Generating (RRCConnectionRequest) Msg3 (nb_rb 1, first_rb 1, round 0, rvidx 0) Msg3: 20.6.1f|58.39.8b.eb.fa.a6
+[0m[0m[PHY]   Done Msg3 encoding
+[0m[0m[PHY]   [UE  0][RAPROC] frame 201, subframe 7: Msg3 Po_PUSCH -20 dBm (-10800,0,100*PL=7400,0,1400)
+[0m[0m[MAC]   Frame 201: Contention resolution timer 0/48
+[0m[0m[MAC]   Frame 201: Contention resolution timer 1/48
+[0m[0m[MAC]   Frame 202: Contention resolution timer 2/48
+[0m[0m[MAC]   Frame 202: Contention resolution timer 3/48
+[0m[0m[MAC]   Frame 202: Contention resolution timer 4/48
+[0m[0m[MAC]   Frame 202: Contention resolution timer 5/48
+[0m[0m[MAC]   Frame 202: Contention resolution timer 6/48
+[0m[0m[MAC]   Frame 202: Contention resolution timer 7/48
+[0m[0m[MAC]   Frame 202: Contention resolution timer 8/48
+[0m[0m[MAC]   Frame 202: Contention resolution timer 9/48
+[0m[0m[MAC]   [UE 0][RAPROC] Frame 202 : received contention resolution msg: 58.39.8b.eb.fa.a6, Terminating RA procedure
+[0m[0m[MAC]   [UE 0][RAPROC] Frame 202 : Clearing RA_active flag
+[0m[0m[MAC]   [UE 0][RAPROC] Frame 202 : Clearing contention resolution timer
+[0m[0m[PHY]   [UE 0][RAPROC] Random-access procedure succeeded. Set C-RNTI = Temporary C-RNTI
+[0m[0m[RRC]   [UE0][RAPROC] Frame 202 : Logical Channel DL-CCCH (SRB0), Received RRCConnectionSetup RNTI e83
+[0m[0m[RRC]   Save physicalConfigDedicated if present 
+[0m[0m[RRC]   Init physicalConfigDedicated UE_rrc_inst to radioResourceConfigDedicated->physicalConfigDedicated
+[0m[0m[PDCP]   [FRAME 00202][ UE][MOD 00][RNTI e83][SRB 01]  Action ADD  LCID 1 (SRB id 1) configured with SN size 5 bits and RLC AM
+[0m[0m[RLC]   [FRAME 00202][ UE][MOD 00][RNTI e83] [SRB 1] rrc_rlc_add_rlc  SRB
+[0m[0m[RLC]   [FRAME 00202][ UE][MOD 00][RNTI e83][SRB AM 01][CONFIGURE] max_retx_threshold 4 poll_pdu 4 poll_byte 65535 t_poll_retransmit 80 t_reordering 35 t_status_prohibit 0
+[0m[0m[RRC]   [UE 0], CONFIG_SRB1 1 corresponding to eNB_index 0
+[0m[0m[RRC]   [FRAME 00202][RRC_UE][MOD 00][][--- MAC_CONFIG_REQ  (SRB1 eNB 0) --->][MAC_UE][MOD 00][]
+[0m[0m[MAC]   [CONFIG][UE 0] Configuring MAC/PHY from eNB 0
+[0m[0m[MAC]   [CONFIG][UE 0] Applying RRC logicalChannelConfig from eNB0
+[0m[0m[MAC]   [CONFIG][UE0] Applying RRC macMainConfig from eNB0
+[0m[0m[PHY]   Transmission Mode 1
+[0m[0m[PHY]   C-RNTI e83 e83 
+[0m[0m[RRC]   [UE 0] State = RRC_CONNECTED (eNB 0)
+[0m[0m[RRC]   [UE 0][RAPROC] Frame 202 : Logical Channel UL-DCCH (SRB1), Generating RRCConnectionSetupComplete (bytes59, eNB 0)
+[0m[0m[RLC]   [FRAME 00202][ UE][MOD 00][RNTI e83][SRB AM 01] RLC_AM_DATA_REQ size 64 Bytes,  NB SDU 1 current_sdu_index=0 next_sdu_index=1 conf 0 mui 0 vtA 0 vtS 0
+[0m[0m[MAC]   [UE 0] TX Multiplex RLC PDU TX Got 66 bytes for LcId1
+[0m[0m[RRC]   [UE 0] Frame 204: received a DCCH 1 message on SRB 1 with Size 3 from eNB 0
+[0m[0m[RRC]   [UE 0] Received securityModeCommand (eNB 0)
+[0m[0m[RRC]   [UE 0] SFN/SF 204/0: Receiving from SRB1 (DL-DCCH), Processing securityModeCommand (eNB 0)
+[0m[0m[RRC]   [UE 0] Security algorithm is set to eea0
+[0m[0m[RRC]   [UE 0] Integrity protection algorithm is set to none
+[0m[0m[RRC]   rrc_ue_process_securityModeCommand, security mode complete case 
+[0m[0m[RRC]   [UE 0] SFN/SF 204/0: Receiving from SRB1 (DL-DCCH), encoding securityModeComplete (eNB 0), rrc_TransactionIdentifier: 2
+[0m[0m[RRC]   sent RRC_DCCH_DATA_REQ to TASK_PDCP_ENB
+[0m[0m[RLC]   [FRAME 00204][ UE][MOD 00][RNTI e83][SRB AM 01] RLC_AM_DATA_REQ size 7 Bytes,  NB SDU 2 current_sdu_index=1 next_sdu_index=2 conf 0 mui 1 vtA 1 vtS 1
+[0m[0m[MAC]   [UE 0] TX Multiplex RL
