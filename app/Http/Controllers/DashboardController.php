@@ -79,7 +79,7 @@ class DashboardController extends Controller
             $cmd = "ping -i 2 8.8.8.8 > ".public_path()."/mi/oai_log/oai_enb_log.txt";
             $rtn = exec($cmd);
         } else {
-            // First start OAI eNB
+            // start OAI eNB
             $cmd = "cd ".public_path()."/mi/MI-eNB && ".
                     // "source oaienv && ". ?? not work
                     "cd cmake_targets/lte_build_oai/build && ".
@@ -88,9 +88,7 @@ class DashboardController extends Controller
                     "> ".public_path()."/mi/oai_log/oai_enb_log.txt 2>&1 &";
             $rtn = exec($cmd);
 
-            // sleep(10);
-
-            // Then start OAI UE
+            // start OAI UE
             $cmd = "cd ".public_path()."/mi/MI-eNB && ".
                     "cd cmake_targets/lte_build_oai/build && ".
                     "sudo -E ./lte-uesoftmodem -C 2350000000 -r 25 --ue-rxgain 125 --basicsim --noS1 ".
@@ -207,7 +205,6 @@ class DashboardController extends Controller
         }
 
         $content = $this->get_oai_config_simulator($mi_string);
-        Log::Info($content);
         Storage::disk('local')->put('OAI_config.conf', $content);
     }
 

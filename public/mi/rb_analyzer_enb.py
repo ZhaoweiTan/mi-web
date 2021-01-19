@@ -14,11 +14,10 @@ try:
 except ImportError:
     import xml.etree.ElementTree as ET
 
-from mobile_insight_enb.analyzer.analyzer import *
-from mobile_insight_enb.analyzer import *
+from mobile_insight_enb.mobile_insight.analyzer.analyzer import *
+from mobile_insight_enb.mobile_insight.analyzer import *
 import time
 import dis
-
 
 class RBAnalyzer(Analyzer):
     """
@@ -49,9 +48,18 @@ class RBAnalyzer(Analyzer):
     def __msg_callback(self, msg):
         if msg.type_id == "LTE_PHY_PDSCH_Stat_Indication":
             records = msg.data['Records']
-            # print (records)
             for record in records:
                 sfn = record['Subframe Num']
                 fn = record['Frame Num']
                 nRB = record['Num RBs']
                 self.rb_dict[nRB] = self.rb_dict.get(nRB, 0) + 1
+        if msg.type_id == "LTE_RRC_MESSAGE":
+            records = msg.data['Records']
+            for record in records:
+                msg_type = record['Message Type']
+                msg = record['Message Content']
+                # escape '<' and '>' in order to render results on website
+                msg = msg.replace("<", "&lt")
+                msg = msg.replace(">", "&gt")
+                msg = "<code> " + msg + " </code>"
+                self.rb_dict[msg_type] = msg

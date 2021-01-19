@@ -7,7 +7,7 @@ import traceback
 import matplotlib.pyplot as plt
 import numpy as np
 
-from mobile_insight_enb.monitor import OfflineReplayer
+from mobile_insight_enb.mobile_insight.monitor import OfflineReplayer
 from rb_analyzer_enb import RBAnalyzer
 
 def rb_analysis():
@@ -28,7 +28,7 @@ def rb_analysis():
 dic = rb_analysis()
 print(dic)
 
-plt.bar(list(dic.keys()), dic.values(), color='g')
-plt.ylabel('# of Occurrences')
-plt.xlabel("# Resource Blocks")
-plt.savefig('mi/result.png')
+# plt.bar(list(dic.keys()), dic.values(), color='g')
+# plt.ylabel('# of Occurrences')
+# plt.xlabel("# Resource Blocks")
+# plt.savefig('mi/result.png')
